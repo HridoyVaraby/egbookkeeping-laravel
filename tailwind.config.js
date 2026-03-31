@@ -22,6 +22,17 @@ export default {
                 display: ["Raleway", "ui-sans-serif", "system-ui"],
                 playfair: ["Playfair Display", "ui-serif", "Georgia"],
             },
+            fontSize: {
+                xs: ['12px', '18px'], // Standard tiny text
+                sm: ['16px', '26px'], // Replaces all card and body descriptions to explicitly be 16px/26px
+                base: ['18px', '26px'], // Replaces subheadings globally to 18px/26px
+                lg: ['20px', '28px'], // Slightly larger subheadings
+                xl: ['24px', '26px'], // Standardizes card titles globally to 24px/26px
+                '2xl': ['28px', '32px'],
+                '3xl': ['32px', '38px'],
+                '4xl': ['36px', '42px'],
+                '5xl': ['48px', '48px'],
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
