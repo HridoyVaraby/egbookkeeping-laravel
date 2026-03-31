@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4 py-12">
         <div class="grid gap-12 md:grid-cols-4 lg:grid-cols-4">
             <!-- Brand & Description -->
-            <div class="lg:col-span-1">
+            <div class="lg:col-span-1 animate-on-scroll delay-100">
                 <a href="{{ url('/') }}" class="inline-block mb-6">
                     <img 
                         src="{{ asset('logo.svg') }}" 
@@ -23,13 +23,13 @@
             </div>
 
             <!-- Useful Links -->
-            <div>
+            <div class="animate-on-scroll delay-200">
                 <h3 class="mb-6 text-lg font-bold text-white">Useful Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ url('/') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Home</a></li>
-                    <li><a href="{{ url('/services') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Services</a></li>
-                    <li><a href="{{ url('/how-it-works') }}" class="text-gray-300 hover:text-white transition-colors text-sm">How It Works</a></li>
-                    <li><a href="{{ url('/tools-and-tips') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Tools and Tips</a></li>
+                    <li><a href="{{ url('/') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Home</a></li>
+                    <li><a href="{{ url('/services') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Services</a></li>
+                    <li><a href="{{ url('/how-it-works') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">How It Works</a></li>
+                    <li><a href="{{ url('/tools-and-tips') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Tools and Tips</a></li>
                     <li>
                         <a 
                             href="https://docs.google.com/document/d/1TmDEIk_PToY1pNmcXMWvgFd5tDUI0BoI/edit?pli=1&tab=t.0" 
@@ -44,18 +44,18 @@
             </div>
 
             <!-- Important Links -->
-            <div>
+            <div class="animate-on-scroll delay-300">
                 <h3 class="mb-6 text-lg font-bold text-white">Important Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ url('/privacy-policy') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
-                    <li><a href="{{ url('/cookie-policy') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Cookie Policy</a></li>
-                    <li><a href="{{ url('/cancellation-refund-policy') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Cancellation & Refund Policy</a></li>
-                    <li><a href="{{ url('/terms-conditions') }}" class="text-gray-300 hover:text-white transition-colors text-sm">Terms & Conditions</a></li>
+                    <li><a href="{{ url('/privacy-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Privacy Policy</a></li>
+                    <li><a href="{{ url('/cookie-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Cookie Policy</a></li>
+                    <li><a href="{{ url('/cancellation-refund-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Cancellation & Refund Policy</a></li>
+                    <li><a href="{{ url('/terms-conditions') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Terms & Conditions</a></li>
                 </ul>
             </div>
 
             <!-- Address/Contact -->
-            <div>
+            <div class="animate-on-scroll delay-400">
                 <h3 class="mb-6 text-lg font-bold text-white">Address</h3>
                 <div class="space-y-4">
                     <p class="text-gray-300 text-sm leading-relaxed">
@@ -99,7 +99,7 @@
                                 href="{{ $social['url'] }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFD700] hover:bg-[#FFC700] transition-all"
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFD700] hover:bg-[#FFC700] hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
                                 aria-label="{{ $social['label'] }}"
                             >
                                 <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5" style="filter: brightness(0) saturate(100%) invert(14%) sepia(31%) saturate(2229%) hue-rotate(185deg) brightness(97%) contrast(92%);" alt="{{ $social['label'] }}" />

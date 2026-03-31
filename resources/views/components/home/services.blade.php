@@ -90,7 +90,7 @@
 <section class="py-16 md:py-20 bg-white">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 animate-on-scroll">
             <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
                 Our <span class="text-eg-accent">Services</span>
             </h2>
@@ -100,7 +100,7 @@
         <!-- Services Grid -->
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             @foreach($services as $service)
-                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                     <!-- Icon -->
                     <div class="mb-4">
                         <div class="w-16 h-16 bg-eg-primary rounded-full flex items-center justify-center">

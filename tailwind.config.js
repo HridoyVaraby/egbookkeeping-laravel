@@ -18,7 +18,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                sans: ["Inter", "ui-sans-serif", "system-ui"],
+                sans: ["Plus Jakarta Sans", "ui-sans-serif", "system-ui"],
                 display: ["Space Grotesk", "ui-sans-serif", "system-ui"],
             },
             colors: {

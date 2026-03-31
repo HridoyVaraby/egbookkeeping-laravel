@@ -14,7 +14,7 @@
     <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-[400px_1fr] gap-12 items-start">
             <!-- Left side - Title and description -->
-            <div class="lg:border-l-4 lg:border-eg-accent lg:pl-6">
+            <div class="lg:border-l-4 lg:border-eg-accent lg:pl-6 animate-on-scroll">
                 <h2 class="text-4xl lg:text-5xl font-bold text-eg-heading mb-4 leading-tight font-display">
                     Top Accounting Platforms We Use
                 </h2>
@@ -28,11 +28,11 @@
             <div class="bg-gray-50 rounded-lg p-12">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10 items-center justify-items-center">
                     @foreach($platforms as $platform)
-                        <div class="flex items-center justify-center w-full h-20">
+                        <div class="flex items-center justify-center w-full h-20 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                             <img
                                 src="{{ $platform['image'] }}"
                                 alt="{{ $platform['name'] }}"
-                                class="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                                class="max-w-full max-h-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 hover:scale-105 transition-all duration-300 ease-out"
                             />
                         </div>
                     @endforeach

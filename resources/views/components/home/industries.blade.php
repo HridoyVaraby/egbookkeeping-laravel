@@ -1,7 +1,7 @@
 <section id="industries" class="py-16 bg-gray-50 scroll-mt-20">
     <div class="container mx-auto px-4">
         <!-- Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 animate-on-scroll">
             <h3 class="text-eg-accent text-xl italic font-semibold mb-2">
                 Industries
             </h3>
@@ -31,7 +31,7 @@
             @endphp
 
             @foreach($industries as $industry)
-                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-{{ ($loop->index + 1) * 100 }}">
                     <div class="flex flex-col items-center text-center">
                         <!-- Icon -->
                         <div class="w-20 h-20 rounded-full border-2 border-eg-accent flex items-center justify-center mb-6">
