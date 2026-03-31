@@ -1,46 +1,85 @@
-@php
-    $navLinks = [
-        ['name' => 'Home', 'link' => '/'],
-        ['name' => 'About', 'link' => '/about'],
-        ['name' => 'Services', 'link' => '/services'],
-        ['name' => 'Portfolio', 'link' => '/portfolio'],
-        ['name' => 'Blog', 'link' => '/blog'],
-        ['name' => 'Contact', 'link' => '/contact'],
-    ];
-@endphp
+<header 
+    x-data="{ isMenuOpen: false }"
+    class="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100"
+>
+    <nav class="container mx-auto flex h-20 items-center justify-between px-4">
+        <a href="{{ url('/') }}" class="flex items-center">
+            <img src="{{ asset('logo.svg') }}" alt="EG Bookkeeping LLC" class="h-12" />
+        </a>
 
-<header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 w-full transition-all duration-300 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-    <div class="container flex h-16 items-center justify-between">
-        <div class="flex items-center gap-2">
-            <a href="/" class="flex items-center space-x-2">
-                <span class="font-display font-bold text-xl text-eg-primary tracking-tight">EG Bookkeeping</span>
-            </a>
-        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex lg:items-center lg:gap-8">
+            @php
+                $navItems = [
+                    ['label' => 'Home', 'path' => '/'],
+                    ['label' => 'Services', 'path' => '/services'],
+                    ['label' => 'Industries', 'path' => '/industries'],
+                    ['label' => 'Benefits', 'path' => '/benefits'],
+                    ['label' => 'About Us', 'path' => '/about'],
+                    ['label' => 'Pricing', 'path' => '/pricing'],
+                    ['label' => 'Blog', 'path' => '/blog'],
+                    ['label' => 'Contact Us', 'path' => '/contact'],
+                ];
+            @endphp
 
-        {{-- Desktop Nav --}}
-        <nav class="hidden md:flex gap-6 items-center">
-            @foreach($navLinks as $item)
-                <a href="{{ $item['link'] }}" class="text-sm font-medium transition-colors hover:text-eg-primary {{ request()->is(trim($item['link'], '/')) ? 'text-eg-primary' : 'text-muted-foreground' }}">
-                    {{ $item['name'] }}
+            @foreach($navItems as $item)
+                <a 
+                    href="{{ url($item['path']) }}" 
+                    class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/') ? 'text-eg-link' : '' }}"
+                >
+                    {{ $item['label'] }}
                 </a>
             @endforeach
-            <a href="/pricing" class="px-4 py-2 bg-eg-button text-white rounded-md text-sm font-semibold hover:bg-eg-button/90 transition-all">Get Started</a>
-        </nav>
 
-        {{-- Mobile Menu Trigger --}}
-        <button class="md:hidden p-2" @click="mobileMenuOpen = !mobileMenuOpen">
-            <span class="sr-only">Toggle Menu</span>
-            <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <x-ui.button 
+                href="https://calendly.com/md-reazul-haque/30min" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-eg-button hover:bg-eg-primary text-white font-semibold px-6 py-2 rounded-md transition-colors"
+            >
+                Book A Call
+            </x-ui.button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+            class="lg:hidden"
+            @click="isMenuOpen = !isMenuOpen"
+            aria-label="Toggle menu"
+        >
+            <i x-show="!isMenuOpen" data-lucide="menu" class="h-6 w-6"></i>
+            <i x-show="isMenuOpen" data-lucide="x" class="h-6 w-6"></i>
         </button>
-    </div>
 
-    {{-- Mobile Menu --}}
-    <div x-show="mobileMenuOpen" x-transition.opacity class="fixed inset-0 top-16 z-50 bg-background md:hidden p-6">
-        <nav class="flex flex-col gap-4">
-            @foreach($navLinks as $item)
-                <a href="{{ $item['link'] }}" class="text-lg font-medium border-b border-border py-2" @click="mobileMenuOpen = false">{{ $item['name'] }}</a>
-            @endforeach
-        </nav>
-    </div>
+        <!-- Mobile Navigation -->
+        <div 
+            x-show="isMenuOpen" 
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-1"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            class="absolute left-0 right-0 top-20 border-b bg-white p-4 lg:hidden shadow-lg"
+            @click.away="isMenuOpen = false"
+        >
+            <div class="flex flex-col gap-4">
+                @foreach($navItems as $item)
+                    <a 
+                        href="{{ url($item['path']) }}" 
+                        class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/') ? 'text-eg-link' : '' }}"
+                        @click="isMenuOpen = false"
+                    >
+                        {{ $item['label'] }}
+                    </a>
+                @endforeach
+                
+                <x-ui.button 
+                    href="https://calendly.com/md-reazul-haque/30min" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="bg-eg-button hover:bg-eg-primary text-white font-semibold px-6 py-2 rounded-md transition-colors w-full"
+                >
+                    Book A Call
+                </x-ui.button>
+            </div>
+        </div>
+    </nav>
 </header>
