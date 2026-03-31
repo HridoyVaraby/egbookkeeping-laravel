@@ -18,8 +18,9 @@ export default {
         },
         extend: {
             fontFamily: {
-                sans: ["Plus Jakarta Sans", "ui-sans-serif", "system-ui"],
-                display: ["Space Grotesk", "ui-sans-serif", "system-ui"],
+                sans: ["Poppins", "ui-sans-serif", "system-ui"],
+                display: ["Raleway", "ui-sans-serif", "system-ui"],
+                playfair: ["Playfair Display", "ui-serif", "Georgia"],
             },
             colors: {
                 border: "hsl(var(--border))",

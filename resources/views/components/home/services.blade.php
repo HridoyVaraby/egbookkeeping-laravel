@@ -94,37 +94,41 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
                 Our <span class="text-eg-accent">Services</span>
             </h2>
-            <p class="text-eg-body text-sm">Let's Simplify Your Bookkeeping Together</p>
+            <p class="text-[18px] leading-[26px] font-sans text-eg-body">Let's Simplify Your Bookkeeping Together</p>
         </div>
 
         <!-- Services Grid -->
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             @foreach($services as $service)
-                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
+                <div class="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:shadow-lg animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                     <!-- Icon -->
-                    <div class="mb-4">
-                        <div class="w-16 h-16 bg-eg-primary rounded-full flex items-center justify-center">
-                            <img src="{{ $service['icon'] }}" alt="{{ $service['title'] }}" class="w-10 h-10" />
+                    <div class="mb-6 flex justify-start">
+                        <!-- Outer white circle with border -->
+                        <div class="w-[90px] h-[90px] rounded-full border border-[#FFE4DC] bg-white flex items-center justify-center shadow-sm">
+                            <!-- Inner solid yellow circle with the image -->
+                            <div class="w-[72px] h-[72px] bg-eg-primary rounded-full flex items-center justify-center">
+                                <img src="{{ $service['icon'] }}" alt="{{ $service['title'] }}" class="w-11 h-11 object-contain" />
+                            </div>
                         </div>
                     </div>
 
                     <!-- Title -->
-                    <h3 class="text-lg font-bold text-eg-subheading mb-3 font-display">{{ $service['title'] }}</h3>
+                    <h3 class="text-[24px] leading-[26px] font-semibold text-[#1F2937] mb-5 font-display">{{ $service['title'] }}</h3>
 
                     <!-- Description -->
-                    <p class="text-sm text-eg-body mb-4 leading-relaxed">{{ $service['description'] }}</p>
+                    <p class="text-[16px] leading-[26px] font-normal font-sans text-[#4B5563] mb-6">{{ $service['description'] }}</p>
 
                     <!-- Ideal For -->
                     @if(isset($service['idealFor']))
-                        <div class="mb-4">
-                            <p class="text-sm font-bold text-eg-subheading mb-2">Ideal for:</p>
-                            <p class="text-sm text-eg-body leading-relaxed">{{ $service['idealFor'] }}</p>
+                        <div class="mb-6">
+                            <p class="text-[16px] leading-[26px] font-semibold font-sans text-[#1F2937] mb-3">Ideal for:</p>
+                            <p class="text-[16px] leading-[26px] font-normal font-sans text-[#4B5563]">{{ $service['idealFor'] }}</p>
                         </div>
                     @endif
 
                     <!-- Features -->
-                    <div class="mb-4">
-                        <p class="text-sm font-bold text-eg-subheading mb-2">
+                    <div class="mb-8">
+                        <p class="text-[16px] leading-[26px] font-semibold font-sans text-[#1F2937] mb-4">
                             @if(str_contains($service['title'], 'Real Estate'))
                                 What You Get:
                             @elseif(str_contains($service['title'], 'Tax'))
@@ -135,8 +139,10 @@
                         </p>
                         <ul class="space-y-2">
                             @foreach($service['includes'] as $item)
-                                <li class="flex items-start text-sm text-eg-body">
-                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <li class="flex items-start text-[16px] leading-[26px] font-normal font-sans text-[#4B5563]">
+                                    <div class="bg-[#71B55E] rounded-sm w-[18px] h-[18px] flex items-center justify-center shrink-0 mr-3 mt-[4px]">
+                                        <i data-lucide="check" class="w-3 h-3 text-white" stroke-width="3"></i>
+                                    </div>
                                     <span>{{ $item }}</span>
                                 </li>
                             @endforeach
@@ -145,12 +151,22 @@
 
                     <!-- CTA Text -->
                     @if(isset($service['cta']))
-                        <p class="text-sm text-eg-body mb-3 italic">{{ $service['cta'] }}</p>
+                        <div class="flex items-start">
+                            <!-- Optional icon based on index could go here, omitting to keep strictly to data -->
+                            <p class="text-[16px] leading-[26px] font-sans text-[#4B5563]">
+                                @php
+                                    $ctaStr = $service['cta'];
+                                    // Use strong for first sentence if matches a question or dash
+                                    $ctaFormatted = preg_replace('/^([^?\—]+[?\—])\s*/', '<strong class="text-[#1F2937]">$1</strong> ', $ctaStr);
+                                @endphp
+                                {!! $ctaFormatted === $ctaStr ? '<strong class="text-[#1F2937]">'.$ctaStr.'</strong>' : $ctaFormatted !!}
+                            </p>
+                        </div>
                     @endif
 
                     <!-- CTA Button Text -->
                     @if(isset($service['ctaButton']))
-                        <p class="text-sm text-eg-accent font-semibold">
+                        <p class="text-[16px] leading-[26px] text-eg-accent font-semibold mt-4">
                             {{ $service['ctaButton'] }}
                         </p>
                     @endif

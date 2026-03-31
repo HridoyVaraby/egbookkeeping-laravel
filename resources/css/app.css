@@ -97,6 +97,18 @@
 
 /* Scroll Animation Utilities */
 @layer utilities {
+    /* Heading Highlight Accent */
+    h1 .text-eg-accent, h1 .text-eg-primary,
+    h2 .text-eg-accent, h2 .text-eg-primary,
+    h3 .text-eg-accent, h3 .text-eg-primary,
+    h4 .text-eg-accent, h4 .text-eg-primary,
+    h5 .text-eg-accent, h5 .text-eg-primary,
+    h6 .text-eg-accent, h6 .text-eg-primary {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
     .animate-on-scroll {
         opacity: 0;
         transform: translateY(20px);
