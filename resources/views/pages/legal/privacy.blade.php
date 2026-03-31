@@ -6,9 +6,10 @@
     @php
         $breadcrumbs = [
             ['label' => 'Home', 'path' => route('home')],
-            ['label' => 'Privacy Policy', 'path' => route('privacy')],
+            ['label' => 'Privacy Policy', 'path' => route('legal.privacy')],
         ];
     @endphp
+
 
     <x-ui.page-hero 
         title='<span class="text-eg-accent italic">Privacy</span> Policy'

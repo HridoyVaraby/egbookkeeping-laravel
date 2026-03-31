@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.app>
     <x-slot:title>Expert Insights & Small Business Advice | EGBookkeeping Blog</x-slot:title>
     <x-slot:meta_description>Stay informed with the latest bookkeeping trends, tax preparation tips, and financial strategies for your small business.</x-slot:meta_description>
 
@@ -10,5 +10,6 @@
 
     <x-blog.list :posts="$posts" />
 
-    <x-sections.newsletter />
-</x-layout>
+    <x-home.cta />
+</x-layouts.app>
+

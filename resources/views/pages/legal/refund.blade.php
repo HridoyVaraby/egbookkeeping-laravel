@@ -6,9 +6,10 @@
     @php
         $breadcrumbs = [
             ['label' => 'Home', 'path' => route('home')],
-            ['label' => 'Cancellation & Refund', 'path' => route('refund')],
+            ['label' => 'Cancellation & Refund', 'path' => route('legal.refund')],
         ];
     @endphp
+
 
     <x-ui.page-hero 
         title='Cancellation & <span class="text-eg-accent italic">Refund</span> Policy'

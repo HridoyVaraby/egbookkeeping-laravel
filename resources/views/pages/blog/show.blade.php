@@ -1,4 +1,4 @@
-<x-layout>
+<x-layouts.app>
     <x-slot:title>{{ $post->title }}</x-slot:title>
     <x-slot:description>{{ \Illuminate\Support\Str::limit(strip_tags($post->excerpt ?? $post->body), 150) }}</x-slot:description>
 
@@ -105,5 +105,5 @@
         </section>
     @endif
 
-    <x-sections.newsletter />
-</x-layout>
+    <x-home.cta />
+</x-layouts.app>
