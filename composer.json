@@ -10,6 +10,7 @@
         "filament/filament": "^3.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "mews/purifier": "^3.4",
         "spatie/laravel-responsecache": "^7.7",
         "spatie/laravel-sitemap": "^8.0",
         "spatie/laravel-sluggable": "^3.8"

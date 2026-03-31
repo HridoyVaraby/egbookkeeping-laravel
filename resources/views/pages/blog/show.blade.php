@@ -55,7 +55,7 @@
 
             {{-- Content --}}
             <div class="prose prose-lg max-w-none prose-headings:text-eg-off-black prose-headings:font-bold prose-p:text-gray-600 prose-a:text-eg-accent prose-strong:text-eg-off-black prose-img:rounded-2xl">
-                {!! $post->body !!}
+                {!! clean($post->body) !!}
             </div>
 
             {{-- Back to Blog --}}

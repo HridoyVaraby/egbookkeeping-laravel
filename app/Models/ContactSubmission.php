@@ -10,7 +10,7 @@ class ContactSubmission extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'email', 'phone', 'subject', 'message', 'is_read'
+        'name', 'email', 'phone', 'project_type', 'subject', 'message', 'is_read'
     ];
 
     protected $casts = [

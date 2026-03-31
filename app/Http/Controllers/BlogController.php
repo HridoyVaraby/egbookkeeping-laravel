@@ -24,7 +24,7 @@ class BlogController extends Controller
             ->where('is_published', true)
             ->firstOrFail();
 
-        $related_posts = Post::where('category_id', $post->category_id)
+        $related_posts = Post::with('category')->where('category_id', $post->category_id)
             ->where('id', '!=', $post->id)
             ->where('is_published', true)
             ->latest()
