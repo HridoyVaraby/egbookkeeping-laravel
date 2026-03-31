@@ -68,14 +68,14 @@
                 <div class="flex items-center gap-4">
                     <span class="text-sm font-semibold text-gray-400">Share:</span>
                     <div class="flex gap-2">
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-eg-accent hover:text-white transition-all">
-                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
+                            <img src="{{ asset('images/footer-icons/linkedin.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="LinkedIn" />
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-eg-accent hover:text-white transition-all">
-                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
+                            <img src="{{ asset('images/footer-icons/x.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="X/Twitter" />
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-eg-accent hover:text-white transition-all">
-                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
+                            <img src="{{ asset('images/footer-icons/facebook.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="Facebook" />
                         </a>
                     </div>
                 </div>
