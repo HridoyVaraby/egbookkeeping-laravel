@@ -1,50 +1,49 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 // Home Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 })->name('home');
 
-// Contact Page
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
-// Static Pages (Placeholders for now) - Will be implemented in Phase 3
-Route::get('/services', function () {
-    return view('pages.services');
-})->name('services');
-
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-})->name('portfolio');
-
+// Main Pages
 Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
+
+Route::get('/services', function () {
+    return view('pages.services');
+})->name('services');
 
 Route::get('/pricing', function () {
     return view('pages.pricing');
 })->name('pricing');
 
-// Blog Routes (Phase 3 & 4)
-Route::get('/blog', function () {
-    return view('pages.blog.index');
-})->name('blog.index');
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
-Route::get('/blog/{slug}', function ($slug) {
-    return view('pages.blog.show', ['slug' => $slug]);
-})->name('blog.show');
+// Blog Routes
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+
+// Form Submissions
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// Legal Pages
+Route::prefix('legal')->name('legal.')->group(function () {
+    Route::get('/privacy-policy', function () {
+        return view('pages.legal.privacy');
+    })->name('privacy');
+
+    Route::get('/terms-conditions', function () {
+        return view('pages.legal.terms');
+    })->name('terms');
+
+    Route::get('/cancellation-refund', function () {
+        return view('pages.legal.refund');
+    })->name('refund');
+});

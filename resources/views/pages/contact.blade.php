@@ -41,64 +41,73 @@
                         @csrf
                         
                         <div>
-                            <label class="text-eg-heading font-semibold text-sm mb-2 block font-display">
-                                Name <span class="text-red-500">*</span>
+                            <label for="name" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                Full Name <span class="text-red-500">*</span>
                             </label>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <input 
-                                        type="text" 
-                                        name="first_name" 
-                                        value="{{ old('first_name') }}"
-                                        placeholder="First Name" 
-                                        required 
-                                        class="w-full px-4 py-2 rounded border border-gray-300 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('first_name') border-red-500 @enderror"
-                                    >
-                                    @error('first_name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
-                                </div>
-                                <div>
-                                    <input 
-                                        type="text" 
-                                        name="last_name" 
-                                        value="{{ old('last_name') }}"
-                                        placeholder="Last Name" 
-                                        required 
-                                        class="w-full px-4 py-2 rounded border border-gray-300 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('last_name') border-red-500 @enderror"
-                                    >
-                                    @error('last_name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
-                                </div>
+                            <input 
+                                type="text" 
+                                id="name"
+                                name="name" 
+                                value="{{ old('name') }}"
+                                placeholder="Your full name" 
+                                required 
+                                class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('name') border-red-500 @enderror"
+                            >
+                            @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    value="{{ old('email') }}"
+                                    placeholder="your@email.com" 
+                                    required 
+                                    class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('email') border-red-500 @enderror"
+                                >
+                                @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
+
+                            <div>
+                                <label for="phone" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                    Phone Number
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    value="{{ old('phone') }}"
+                                    placeholder="+1 (555) 000-0000" 
+                                    class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('phone') border-red-500 @enderror"
+                                >
+                                @error('phone') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
 
                         <div>
-                            <label for="email" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
-                                Email <span class="text-red-500">*</span>
+                            <label for="project_type" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                Service Requested <span class="text-red-500">*</span>
                             </label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email"
-                                value="{{ old('email') }}"
-                                placeholder="your@email.com" 
-                                required 
-                                class="w-full px-4 py-2 rounded border border-gray-300 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('email') border-red-500 @enderror"
+                            <select 
+                                id="project_type" 
+                                name="project_type"
+                                required
+                                class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all appearance-none bg-white @error('project_type') border-red-500 @enderror"
                             >
-                            @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
-                        </div>
-
-                        <div>
-                            <label for="whatsapp" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
-                                WhatsApp Number
-                            </label>
-                            <input 
-                                type="tel" 
-                                id="whatsapp" 
-                                name="whatsapp"
-                                value="{{ old('whatsapp') }}"
-                                placeholder="+1 (555) 000-0000" 
-                                class="w-full px-4 py-2 rounded border border-gray-300 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all @error('whatsapp') border-red-500 @enderror"
-                            >
-                            @error('whatsapp') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                                <option value="" disabled {{ old('project_type') ? '' : 'selected' }}>Select a service</option>
+                                <option value="Monthly Bookkeeping" {{ old('project_type') == 'Monthly Bookkeeping' ? 'selected' : '' }}>Monthly Bookkeeping</option>
+                                <option value="Catch-Up Bookkeeping" {{ old('project_type') == 'Catch-Up Bookkeeping' ? 'selected' : '' }}>Catch-Up Bookkeeping</option>
+                                <option value="Payroll Services" {{ old('project_type') == 'Payroll Services' ? 'selected' : '' }}>Payroll Services</option>
+                                <option value="Tax Preparation" {{ old('project_type') == 'Tax Preparation' ? 'selected' : '' }}>Tax Preparation</option>
+                                <option value="Business Consultation" {{ old('project_type') == 'Business Consultation' ? 'selected' : '' }}>Business Consultation</option>
+                                <option value="Other" {{ old('project_type') == 'Other' ? 'selected' : '' }}>Other</option>
+                            </select>
+                            @error('project_type') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
 
                         <div>
@@ -110,20 +119,23 @@
                                 name="message"
                                 required
                                 rows="5"
-                                placeholder="How can we help you?"
-                                class="w-full px-4 py-2 rounded border border-gray-300 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all resize-none @error('message') border-red-500 @enderror"
+                                placeholder="Tell us about your business and how we can assist you..."
+                                class="w-full px-4 py-2 rounded-xl border border-gray-200 focus:border-eg-accent focus:ring-2 focus:ring-eg-accent/20 outline-none transition-all resize-none @error('message') border-red-500 @enderror"
                             >{{ old('message') }}</textarea>
                             @error('message') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
 
-                        <div class="pt-4">
+                        <div class="pt-2">
                             <x-ui.button 
                                 type="submit" 
                                 variant="primary"
-                                class="w-full sm:w-auto"
+                                class="w-full py-4 text-lg"
                             >
-                                Send Message
+                                Submit Request
                             </x-ui.button>
+                            <p class="text-center text-xs text-gray-400 mt-4 italic">
+                                We usually respond within 24 business hours.
+                            </p>
                         </div>
                     </form>
                 </div>

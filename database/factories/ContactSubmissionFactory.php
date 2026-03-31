@@ -23,9 +23,8 @@ class ContactSubmissionFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
-            'subject' => $this->faker->sentence(),
+            'project_type' => $this->faker->randomElement(['Monthly Bookkeeping', 'Tax Preparation', 'Payroll Services', 'Consulting']),
             'message' => $this->faker->paragraphs(2, true),
-            'is_read' => $this->faker->boolean(20),
         ];
     }
 }
