@@ -38,4 +38,15 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    protected static function booted()
+    {
+        static::saved(function ($model) {
+            \Spatie\ResponseCache\Facades\ResponseCache::clear();
+        });
+
+        static::deleted(function ($model) {
+            \Spatie\ResponseCache\Facades\ResponseCache::clear();
+        });
+    }
 }

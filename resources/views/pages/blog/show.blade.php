@@ -1,6 +1,6 @@
 <x-layout>
-    <x-slot:title>{{ $post->meta_title ?? $post->title }} | EGBookkeeping</x-slot:title>
-    <x-slot:meta_description>{{ $post->meta_description ?? $post->excerpt }}</x-slot:meta_description>
+    <x-slot:title>{{ $post->title }}</x-slot:title>
+    <x-slot:description>{{ \Illuminate\Support\Str::limit(strip_tags($post->excerpt ?? $post->body), 150) }}</x-slot:description>
 
     <x-ui.page-hero 
         :title="$post->title"

@@ -6,7 +6,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- SEO --}}
-    @yield('seo')
+    @hasSection('seo')
+        @yield('seo')
+    @else
+        <x-seo />
+    @endif
     @stack('seo')
 
     {{-- Fonts --}}
