@@ -18,6 +18,14 @@ Route::get('/services', function () {
     return view('pages.services');
 })->name('services');
 
+Route::get('/industries', function () {
+    return view('pages.industries');
+})->name('industries');
+
+Route::get('/benefits', function () {
+    return view('pages.benefits');
+})->name('benefits');
+
 Route::get('/pricing', function () {
     return view('pages.pricing');
 })->name('pricing');

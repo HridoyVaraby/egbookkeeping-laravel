@@ -89,9 +89,9 @@
                     <div class="flex gap-3 mt-4">
                         @php
                             $socials = [
-                                ['label' => 'Facebook', 'url' => 'https://www.facebook.com/Bookkeeper.reaz/', 'icon' => 'facebook'],
-                                ['label' => 'Twitter', 'url' => 'https://x.com/Md01713', 'icon' => 'twitter'],
-                                ['label' => 'LinkedIn', 'url' => 'https://www.linkedin.com/company/egbookkeepingllc', 'icon' => 'linkedin'],
+                                ['label' => 'Facebook', 'url' => 'https://www.facebook.com/Bookkeeper.reaz/', 'icon' => 'facebook.svg'],
+                                ['label' => 'Twitter', 'url' => 'https://x.com/Md01713', 'icon' => 'x.svg'],
+                                ['label' => 'LinkedIn', 'url' => 'https://www.linkedin.com/company/egbookkeepingllc', 'icon' => 'linkedin.svg'],
                             ];
                         @endphp
                         @foreach($socials as $social)
@@ -99,10 +99,10 @@
                                 href="{{ $social['url'] }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFD700] text-[#1a2f4d] hover:bg-[#FFC700] transition-all"
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFD700] hover:bg-[#FFC700] transition-all"
                                 aria-label="{{ $social['label'] }}"
                             >
-                                <i data-lucide="{{ $social['icon'] }}" class="h-5 w-5"></i>
+                                <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5" style="filter: brightness(0) saturate(100%) invert(14%) sepia(31%) saturate(2229%) hue-rotate(185deg) brightness(97%) contrast(92%);" alt="{{ $social['label'] }}" />
                             </a>
                         @endforeach
                     </div>
@@ -116,17 +116,17 @@
             <div class="flex justify-center flex-wrap gap-3 mb-6">
                 @php
                     $payments = [
-                        ['name' => 'Visa', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg'],
-                        ['name' => 'Mastercard', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'],
-                        ['name' => 'PayPal', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg'],
-                        ['name' => 'Amex', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg'],
-                        ['name' => 'Maestro', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg'],
-                        ['name' => 'JCB', 'url' => 'https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg'],
+                        ['name' => 'Visa', 'file' => 'visa.svg'],
+                        ['name' => 'Mastercard', 'file' => 'mastercard.svg'],
+                        ['name' => 'PayPal', 'file' => 'paypal.svg'],
+                        ['name' => 'Amex', 'file' => 'americanexpress.svg'],
+                        ['name' => 'Discover', 'file' => 'discover.svg'],
+                        ['name' => 'JCB', 'file' => 'jcb.svg'],
                     ];
                 @endphp
                 @foreach($payments as $payment)
                     <div class="bg-white rounded px-3 py-2 flex items-center justify-center">
-                        <img src="{{ $payment['url'] }}" alt="{{ $payment['name'] }}" class="h-5 w-auto" />
+                        <img src="{{ asset('images/footer-icons/' . $payment['file']) }}" alt="{{ $payment['name'] }}" class="h-5 w-auto" />
                     </div>
                 @endforeach
             </div>

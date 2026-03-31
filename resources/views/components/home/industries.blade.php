@@ -1,4 +1,4 @@
-<section class="py-16 bg-gray-50">
+<section id="industries" class="py-16 bg-gray-50 scroll-mt-20">
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12">
