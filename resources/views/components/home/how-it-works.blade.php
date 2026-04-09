@@ -92,14 +92,16 @@
                 How It <span class="text-[#FF6B35]">Works?</span>
             </h2>
             <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-                Getting started with EG Bookkeeping LLC is easy. Follow these simple steps to enjoy tailored, hassle-free bookkeeping services.
+                Getting started with EG Bookkeeping LLC is easy. Follow these simple steps to enjoy tailored,
+                hassle-free bookkeeping services.
             </p>
         </div>
 
         <!-- Timeline -->
         <div class="relative max-w-5xl mx-auto">
             <!-- Center line -->
-            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform -translate-x-1/2 hidden md:block"></div>
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform -translate-x-1/2 hidden md:block">
+            </div>
 
             <!-- Steps -->
             <div class="space-y-12">
@@ -108,8 +110,10 @@
                         <!-- Left Side Content -->
                         <div class="w-full md:w-5/12">
                             @if($step['side'] === 'left')
-                                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative">
-                                    <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
+                                <div
+                                    class="bg-white rounded-lg shadow-md p-12 hover:shadow-lg transition-shadow relative h-[400px] flex flex-col justify-center">
+                                    <div
+                                        class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
                                         <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
                                     </div>
                                     <p class="text-xs text-gray-500 mb-1">{{ $step['subtitle'] }}</p>
@@ -125,15 +129,18 @@
                         </div>
 
                         <!-- Center Circle Dot -->
-                        <div class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center z-10">
-                            <div class="w-3 h-3 rounded-full bg-[#1E88E5] border-4 border-white shadow-md"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center z-10">
+                            <div class="w-4 h-4 rounded-full bg-[#1E88E5] border-4 border-white shadow-md"></div>
                         </div>
 
                         <!-- Right Side Content -->
                         <div class="w-full md:w-5/12 mt-4 md:mt-0">
                             @if($step['side'] === 'right')
-                                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow relative">
-                                    <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
+                                <div
+                                    class="bg-white rounded-lg shadow-md p-12 hover:shadow-lg transition-shadow relative h-[400px] flex flex-col justify-center">
+                                    <div
+                                        class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
                                         <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
                                     </div>
                                     <p class="text-xs text-gray-500 mb-1">{{ $step['subtitle'] }}</p>
@@ -150,7 +157,8 @@
 
                         <!-- Mobile Icon -->
                         <div class="md:hidden flex items-center justify-center my-4">
-                            <div class="w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg">
                                 <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
                             </div>
                         </div>
