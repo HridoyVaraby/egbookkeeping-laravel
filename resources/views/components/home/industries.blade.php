@@ -2,13 +2,10 @@
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12 animate-on-scroll">
-            <h3 class="text-eg-accent text-xl italic font-semibold mb-2">
-                Industries
-            </h3>
-            <h2 class="text-4xl lg:text-5xl font-bold text-eg-heading mb-4 font-display">
-                We Specialize In
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
+                We Specialize <span class="text-eg-accent">In</span>
             </h2>
-            <p class="text-eg-body text-base max-w-2xl mx-auto">
+            <p class="text-[18px] leading-[26px] font-sans text-[#4B5563] max-w-2xl mx-auto">
                 Tailored bookkeeping services designed to meet the unique needs of your industry.
             </p>
         </div>
@@ -39,12 +36,12 @@
                         </div>
 
                         <!-- Title -->
-                        <h3 class="text-2xl font-bold text-eg-heading mb-4 font-display">
+                        <h3 class="text-[24px] leading-[26px] font-semibold text-[#1F2937] mb-5 font-display">
                             {{ $industry['title'] }}
                         </h3>
 
                         <!-- Description -->
-                        <p class="text-eg-body text-base leading-relaxed">
+                        <p class="text-[16px] leading-[26px] font-normal font-sans text-[#4B5563]">
                             {{ $industry['description'] }}
                         </p>
                     </div>

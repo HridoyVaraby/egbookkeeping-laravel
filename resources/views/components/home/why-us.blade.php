@@ -22,10 +22,10 @@
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12 max-w-3xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-eg-heading mb-4 font-display">
-                Why <span class="text-eg-accent italic">Choose</span> Us
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
+                Why <span class="text-eg-accent">Choose</span> Us
             </h2>
-            <p class="text-eg-body text-base leading-relaxed">
+            <p class="text-[18px] leading-[26px] font-sans text-[#4B5563]">
                 We go beyond numbers to deliver tailored, reliable, and precise bookkeeping 
                 solutions. Discover why businesses trust us to manage their finances with confidence 
                 and care.
@@ -37,10 +37,10 @@
             @foreach($reasons as $reason)
                 <div class="bg-gradient-to-br from-[#E8A84D] to-[#D89332] rounded-lg p-8 text-[#1a2f4d] shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                     <i data-lucide="{{ $reason['icon'] }}" class="w-8 h-8 mb-6" stroke-width="2"></i>
-                    <h3 class="text-xl font-bold mb-4 leading-tight font-display">
+                    <h3 class="text-[24px] leading-[26px] font-semibold mb-5 font-display">
                         {{ $reason['title'] }}
                     </h3>
-                    <p class="text-sm leading-relaxed opacity-90">
+                    <p class="text-[16px] leading-[26px] font-normal font-sans opacity-90">
                         {{ $reason['description'] }}
                     </p>
                 </div>

@@ -14,11 +14,13 @@
     <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-[400px_1fr] gap-12 items-start">
             <!-- Left side - Title and description -->
-            <div class="lg:border-l-4 lg:border-eg-accent lg:pl-6 animate-on-scroll">
-                <h2 class="text-4xl lg:text-5xl font-bold text-eg-heading mb-4 leading-tight font-display">
-                    Top Accounting Platforms We Use
+            <div class="relative lg:pl-6 animate-on-scroll">
+                {{-- Gradient left accent line --}}
+                <div class="hidden lg:block absolute left-0 top-0 w-1.5 rounded-full" style="background: linear-gradient(to top, #f55714, #D4A853, #C69026); height: 100%;"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1F2937] mb-4 leading-tight font-display">
+                    Top Accounting Platforms <span class="text-eg-accent">We Use</span>
                 </h2>
-                <p class="text-eg-body text-base leading-relaxed">
+                <p class="text-[16px] leading-[26px] font-sans text-[#4B5563]">
                     We utilize the most reliable and advanced accounting tools to ensure accuracy, 
                     efficiency, and peace of mind for your business.
                 </p>

@@ -37,10 +37,10 @@
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12 max-w-3xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-eg-heading mb-4 font-display">
-                <span class="text-eg-accent italic">Benefits</span> Exceed The Investment
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
+                <span class="text-eg-accent">Benefits</span> Exceed The Investment
             </h2>
-            <p class="text-eg-body text-base leading-relaxed">
+            <p class="text-[18px] leading-[26px] font-sans text-[#4B5563]">
                 By leveraging our expertise, your investment in our bookkeeping services delivers 
                 exceptional returns, both in saved time and optimized financial health.
             </p>
@@ -53,16 +53,16 @@
                     <!-- Icon -->
                     <div class="flex-shrink-0">
                         <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center">
-                            <i data-lucide="{{ $benefit['icon'] }}" class="w-6 h-6 text-eg-heading" stroke-width="2"></i>
+                            <i data-lucide="{{ $benefit['icon'] }}" class="w-6 h-6 text-eg-accent" stroke-width="2"></i>
                         </div>
                     </div>
 
                     <!-- Content -->
                     <div>
-                        <h3 class="text-xl font-bold text-eg-heading mb-2 font-display">
+                        <h3 class="text-[24px] leading-[26px] font-semibold text-[#1F2937] mb-4 font-display">
                             {{ $benefit['title'] }}
                         </h3>
-                        <p class="text-eg-body text-sm leading-relaxed">
+                        <p class="text-[16px] leading-[26px] font-normal font-sans text-[#4B5563]">
                             {{ $benefit['description'] }}
                         </p>
                     </div>
