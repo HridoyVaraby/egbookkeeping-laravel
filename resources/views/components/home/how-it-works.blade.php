@@ -84,83 +84,85 @@
     ];
 @endphp
 
-<section class="py-16 md:py-24 bg-gray-50">
+<section class="bg-gradient-to-b from-white to-slate-50 py-16 md:py-24">
     <div class="container mx-auto px-4">
         <!-- Header -->
-        <div class="text-center mb-16">
+        <div class="mb-16 text-center md:mb-20">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-display">
                 How It <span class="text-[#FF6B35]">Works?</span>
             </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+            <p class="mx-auto max-w-2xl text-sm text-gray-600 md:text-base">
                 Getting started with EG Bookkeeping LLC is easy. Follow these simple steps to enjoy tailored,
                 hassle-free bookkeeping services.
             </p>
         </div>
 
         <!-- Timeline -->
-        <div class="relative max-w-5xl mx-auto">
+        <div class="relative mx-auto max-w-5xl">
             <!-- Center line -->
-            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform -translate-x-1/2 hidden md:block">
+            <div class="absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-[#FFD59E] via-[#FFA500] to-[#D7E7F8] md:block">
             </div>
 
             <!-- Steps -->
-            <div class="space-y-12">
+            <div class="space-y-8 md:space-y-10">
                 @foreach($steps as $index => $step)
-                    <div class="relative flex items-center justify-between flex-col md:flex-row">
+                    <div class="relative flex flex-col items-stretch justify-between md:flex-row md:items-center">
                         <!-- Left Side Content -->
                         <div class="w-full md:w-5/12">
                             @if($step['side'] === 'left')
                                 <div
-                                    class="bg-white rounded-lg shadow-md p-12 hover:shadow-lg transition-shadow relative h-[400px] flex flex-col justify-center">
-                                    <div
-                                        class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
-                                        <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
+                                    class="relative flex min-h-[220px] flex-col justify-center overflow-hidden rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_60px_rgba(15,23,42,0.12)] md:p-8">
+                                    <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-[#FFF4E4]"></div>
+                                    <div class="relative z-10 flex items-center gap-3">
+                                        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFB326] to-[#FF8C1A] text-white shadow-lg">
+                                            <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
+                                        </span>
+                                        <div>
+                                            <p class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1E88E5]">{{ $step['number'] }}</p>
+                                            <p class="text-xs text-gray-500">{{ $step['subtitle'] }}</p>
+                                        </div>
                                     </div>
-                                    <p class="text-xs text-gray-500 mb-1">{{ $step['subtitle'] }}</p>
-                                    <h3 class="text-xl font-bold text-[#E91E63] mb-2 font-display">{{ $step['title'] }}</h3>
-                                    <p class="text-sm text-gray-600">{{ $step['description'] }}</p>
+                                    <h3 class="relative z-10 mt-5 text-2xl font-bold text-[#E91E63] font-display">{{ $step['title'] }}</h3>
+                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-gray-600">{{ $step['description'] }}</p>
                                 </div>
                             @else
-                                <div class="text-right hidden md:block pr-8">
-                                    <p class="text-sm text-[#1E88E5] font-semibold">{{ $step['number'] }}</p>
-                                    <p class="text-xs text-gray-500">{{ $step['label'] }}</p>
+                                <div class="hidden pr-10 text-right md:block">
+                                    <p class="text-sm font-semibold text-[#1E88E5]">{{ $step['number'] }}</p>
+                                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500">{{ $step['label'] }}</p>
                                 </div>
                             @endif
                         </div>
 
                         <!-- Center Circle Dot -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center z-10">
-                            <div class="w-4 h-4 rounded-full bg-[#1E88E5] border-4 border-white shadow-md"></div>
+                            class="absolute left-1/2 z-10 hidden -translate-x-1/2 items-center justify-center md:flex">
+                            <div class="h-4 w-4 rounded-full border-4 border-white bg-[#1E88E5] shadow-md"></div>
                         </div>
 
                         <!-- Right Side Content -->
                         <div class="w-full md:w-5/12 mt-4 md:mt-0">
                             @if($step['side'] === 'right')
                                 <div
-                                    class="bg-white rounded-lg shadow-md p-12 hover:shadow-lg transition-shadow relative h-[400px] flex flex-col justify-center">
-                                    <div
-                                        class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg hidden md:flex">
-                                        <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
+                                    class="relative flex min-h-[220px] flex-col justify-center overflow-hidden rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_60px_rgba(15,23,42,0.12)] md:p-8">
+                                    <div class="absolute left-0 top-0 h-24 w-24 rounded-br-full bg-[#EEF6FF]"></div>
+                                    <div class="relative z-10 flex items-center gap-3">
+                                        <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFB326] to-[#FF8C1A] text-white shadow-lg">
+                                            <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
+                                        </span>
+                                        <div>
+                                            <p class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1E88E5]">{{ $step['number'] }}</p>
+                                            <p class="text-xs text-gray-500">{{ $step['subtitle'] }}</p>
+                                        </div>
                                     </div>
-                                    <p class="text-xs text-gray-500 mb-1">{{ $step['subtitle'] }}</p>
-                                    <h3 class="text-xl font-bold text-[#E91E63] mb-2 font-display">{{ $step['title'] }}</h3>
-                                    <p class="text-sm text-gray-600">{{ $step['description'] }}</p>
+                                    <h3 class="relative z-10 mt-5 text-2xl font-bold text-[#E91E63] font-display">{{ $step['title'] }}</h3>
+                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-gray-600">{{ $step['description'] }}</p>
                                 </div>
                             @else
-                                <div class="text-left hidden md:block pl-8">
-                                    <p class="text-sm text-[#1E88E5] font-semibold">{{ $step['number'] }}</p>
-                                    <p class="text-xs text-gray-500">{{ $step['label'] }}</p>
+                                <div class="hidden pl-10 text-left md:block">
+                                    <p class="text-sm font-semibold text-[#1E88E5]">{{ $step['number'] }}</p>
+                                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500">{{ $step['label'] }}</p>
                                 </div>
                             @endif
-                        </div>
-
-                        <!-- Mobile Icon -->
-                        <div class="md:hidden flex items-center justify-center my-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-[#FFA500] flex items-center justify-center text-white shadow-lg">
-                                <i data-lucide="{{ $step['icon'] }}" class="h-5 w-5"></i>
-                            </div>
                         </div>
                     </div>
                 @endforeach
