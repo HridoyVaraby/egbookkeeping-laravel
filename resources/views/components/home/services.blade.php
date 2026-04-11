@@ -1,3 +1,4 @@
+@props(['showHeader' => true])
 @php
     $services = [
         [
@@ -90,12 +91,14 @@
 <section class="py-16 md:py-20 bg-white">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
+        @if($showHeader)
         <div class="text-center mb-12 animate-on-scroll">
             <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
                 Our <span class="text-eg-accent">Services</span>
             </h2>
             <p class="text-[18px] leading-[26px] font-sans text-eg-body">Let's Simplify Your Bookkeeping Together</p>
         </div>
+        @endif
 
         <!-- Services Grid -->
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">

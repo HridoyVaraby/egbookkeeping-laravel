@@ -17,7 +17,7 @@
     />
 
     {{-- Reuse the Home Services Grid --}}
-    <x-home.services />
+    <x-home.services :show-header="false" />
 
     {{-- Why us or other specific service benefits could be added here --}}
 
