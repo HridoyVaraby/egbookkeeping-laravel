@@ -3,29 +3,32 @@
     class="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100"
 >
     <nav class="container mx-auto flex h-20 items-center justify-between px-4">
+        @php
+            $navItems = [
+                ['label' => 'Home', 'path' => '/'],
+                ['label' => 'Services', 'path' => '/services'],
+                ['label' => 'Industries', 'path' => '/industries'],
+                ['label' => 'Benefits', 'path' => '/benefits'],
+                ['label' => 'About Us', 'path' => '/about'],
+                ['label' => 'Pricing', 'path' => '/pricing'],
+                ['label' => 'Blog', 'path' => '/blog'],
+                ['label' => 'Contact Us', 'path' => '/contact'],
+            ];
+        @endphp
+
         <a href="{{ url('/') }}" class="flex items-center">
             <img src="{{ asset('logo.svg') }}" alt="EG Bookkeeping LLC" class="h-12" />
         </a>
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex lg:items-center lg:gap-8">
-            @php
-                $navItems = [
-                    ['label' => 'Home', 'path' => '/'],
-                    ['label' => 'Services', 'path' => '/services'],
-                    ['label' => 'Industries', 'path' => '/industries'],
-                    ['label' => 'Benefits', 'path' => '/benefits'],
-                    ['label' => 'About Us', 'path' => '/about'],
-                    ['label' => 'Pricing', 'path' => '/pricing'],
-                    ['label' => 'Blog', 'path' => '/blog'],
-                    ['label' => 'Contact Us', 'path' => '/contact'],
-                ];
-            @endphp
-
             @foreach($navItems as $item)
+                @php
+                    $isActive = Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/');
+                @endphp
                 <a 
                     href="{{ url($item['path']) }}" 
-                    class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/') ? 'text-eg-link' : '' }}"
+                    class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ $isActive ? 'text-eg-link' : '' }}"
                 >
                     {{ $item['label'] }}
                 </a>
@@ -62,9 +65,12 @@
         >
             <div class="flex flex-col gap-4">
                 @foreach($navItems as $item)
+                    @php
+                        $isActive = Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/');
+                    @endphp
                     <a 
                         href="{{ url($item['path']) }}" 
-                        class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ Request::is(trim($item['path'], '/')) || (Request::is('/') && $item['path'] == '/') ? 'text-eg-link' : '' }}"
+                        class="text-sm font-medium text-eg-body hover:text-eg-link transition-colors {{ $isActive ? 'text-eg-link' : '' }}"
                         @click="isMenuOpen = false"
                     >
                         {{ $item['label'] }}

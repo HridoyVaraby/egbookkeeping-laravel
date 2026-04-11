@@ -10,7 +10,7 @@
     ];
 @endphp
 
-<section class="py-16 bg-white">
+<section class="bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-[400px_1fr] gap-12 items-start">
             <!-- Left side - Title and description -->
@@ -27,10 +27,10 @@
             </div>
 
             <!-- Right side - Platform logos grid -->
-            <div class="bg-gray-50 rounded-lg p-12">
+            <div class="rounded-[28px] border border-slate-100 bg-[linear-gradient(180deg,_#ffffff_0%,_#f8fbff_100%)] p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] md:p-12">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-10 items-center justify-items-center">
                     @foreach($platforms as $platform)
-                        <div class="flex items-center justify-center w-full h-20 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
+                        <div class="flex h-20 w-full items-center justify-center rounded-2xl border border-transparent bg-white/70 px-4 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                             <img
                                 src="{{ $platform['image'] }}"
                                 alt="{{ $platform['name'] }}"

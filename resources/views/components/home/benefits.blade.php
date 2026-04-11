@@ -33,7 +33,7 @@
     ];
 @endphp
 
-<section id="benefits" class="py-16 bg-gray-50 scroll-mt-20">
+<section id="benefits" class="scroll-mt-20 bg-[linear-gradient(180deg,_#f8fbff_0%,_#ffffff_100%)] py-16">
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12 max-w-3xl mx-auto">
@@ -47,12 +47,13 @@
         </div>
 
         <!-- Benefits Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3 mx-auto">
             @foreach($benefits as $benefit)
-                <div class="flex gap-4">
+                <div class="rounded-[26px] border border-slate-100 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.1)]">
+                    <div class="flex gap-4">
                     <!-- Icon -->
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF4E4] shadow-sm">
                             <i data-lucide="{{ $benefit['icon'] }}" class="w-6 h-6 text-eg-accent" stroke-width="2"></i>
                         </div>
                     </div>
@@ -65,6 +66,7 @@
                         <p class="text-[16px] leading-[26px] font-normal font-sans text-[#4B5563]">
                             {{ $benefit['description'] }}
                         </p>
+                    </div>
                     </div>
                 </div>
             @endforeach

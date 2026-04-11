@@ -1,21 +1,31 @@
-<footer class="relative bg-[#1a2f4d] text-white">
-    <div class="container mx-auto px-4 py-12">
-        <div class="grid gap-12 md:grid-cols-4 lg:grid-cols-4">
+<footer class="relative overflow-hidden bg-[#102743] text-white">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#EBA927] to-transparent"></div>
+    <div class="absolute -left-24 top-16 h-56 w-56 rounded-full bg-[#1F4C78]/30 blur-3xl"></div>
+    <div class="absolute -right-24 bottom-8 h-64 w-64 rounded-full bg-[#EBA927]/10 blur-3xl"></div>
+
+    <div class="container relative mx-auto px-4 py-14 md:py-16">
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <!-- Brand & Description -->
             <div class="lg:col-span-1 animate-on-scroll delay-100">
-                <a href="{{ url('/') }}" class="inline-block mb-6">
-                    <img 
-                        src="{{ asset('logo.svg') }}" 
-                        alt="EG Bookkeeping LLC" 
-                        class="h-16 w-auto"
-                    />
+                <a href="{{ url('/') }}" class="inline-flex items-center gap-3">
+                    <div class="rounded-2xl border border-white/10 bg-white p-2 shadow-lg">
+                        <img 
+                            src="{{ asset('logo.svg') }}" 
+                            alt="EG Bookkeeping LLC" 
+                            class="h-12 w-auto"
+                        />
+                    </div>
+                    <div>
+                        <p class="font-display text-xl font-bold text-white">EG Bookkeeping LLC</p>
+                        <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#EBA927]">Smarter books. Clearer decisions.</p>
+                    </div>
                 </a>
-                <p class="mt-4 text-sm leading-relaxed text-gray-300">
+                <p class="mt-6 text-sm leading-7 text-slate-300">
                     At EG Bookkeeping LLC, we specialize in precise and reliable bookkeeping services tailored to your business needs. With years of expertise, we ensure your financials are accurate, compliant, and stress-free.
                 </p>
                 
                 <div class="mt-6">
-                    <a href="{{ url('/about') }}" class="inline-flex items-center text-[#FFD700] text-sm font-semibold hover:underline">
+                    <a href="{{ url('/about') }}" class="inline-flex items-center text-sm font-semibold text-[#EBA927] transition-colors hover:text-[#f0b63c]">
                         Learn more
                         <span class="ml-2">→</span>
                     </a>
@@ -26,16 +36,16 @@
             <div class="animate-on-scroll delay-200">
                 <h3 class="mb-6 text-lg font-bold text-white">Useful Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ url('/') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Home</a></li>
-                    <li><a href="{{ url('/services') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Services</a></li>
-                    <li><a href="{{ url('/how-it-works') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">How It Works</a></li>
-                    <li><a href="{{ url('/tools-and-tips') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Tools and Tips</a></li>
+                    <li><a href="{{ url('/') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Home</a></li>
+                    <li><a href="{{ url('/services') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Services</a></li>
+                    <li><a href="{{ url('/how-it-works') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">How It Works</a></li>
+                    <li><a href="{{ url('/tools-and-tips') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Tools and Tips</a></li>
                     <li>
                         <a 
                             href="https://docs.google.com/document/d/1TmDEIk_PToY1pNmcXMWvgFd5tDUI0BoI/edit?pli=1&tab=t.0" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            class="text-gray-300 hover:text-white transition-colors text-sm"
+                            class="text-sm text-slate-300 transition-colors hover:text-white"
                         >
                             Bookkeeping/Accounting Agreement
                         </a>
@@ -47,10 +57,9 @@
             <div class="animate-on-scroll delay-300">
                 <h3 class="mb-6 text-lg font-bold text-white">Important Links</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ url('/privacy-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Privacy Policy</a></li>
-                    <li><a href="{{ url('/cookie-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Cookie Policy</a></li>
-                    <li><a href="{{ url('/cancellation-refund-policy') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Cancellation & Refund Policy</a></li>
-                    <li><a href="{{ url('/terms-conditions') }}" class="inline-block text-gray-300 hover:text-white hover:-translate-y-0.5 transition-all duration-300 text-sm">Terms & Conditions</a></li>
+                    <li><a href="{{ route('legal.privacy') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="{{ route('legal.terms') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="{{ route('legal.refund') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Cancellation & Refund Policy</a></li>
                 </ul>
             </div>
 
@@ -58,28 +67,28 @@
             <div class="animate-on-scroll delay-400">
                 <h3 class="mb-6 text-lg font-bold text-white">Address</h3>
                 <div class="space-y-4">
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <p class="text-sm leading-relaxed text-slate-300">
                         1209 MOUNTAIN ROAD PL NE, STE R,<br />
                         ALBUQUERQUE, NM 87110, USA
                     </p>
                     
                     <div class="space-y-2">
-                        <a href="mailto:reaz@egbookkeeping.com" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                        <a href="mailto:reaz@egbookkeeping.com" class="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-white">
                             <i data-lucide="mail" class="h-4 w-4"></i>
                             reaz@egbookkeeping.com
                         </a>
-                        <a href="mailto:support@egbookkeeping.com" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                        <a href="mailto:support@egbookkeeping.com" class="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-white">
                             <i data-lucide="mail" class="h-4 w-4"></i>
                             support@egbookkeeping.com
                         </a>
                     </div>
 
                     <div class="space-y-2">
-                        <a href="tel:+15055232471" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                        <a href="tel:+15055232471" class="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-white">
                             <i data-lucide="phone" class="h-4 w-4 text-[#FF6B35]"></i>
                             +1 505 523 2471
                         </a>
-                        <a href="https://wa.me/8801973301465" class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                        <a href="https://wa.me/8801973301465" class="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-white">
                             <i data-lucide="message-circle" class="h-4 w-4 text-[#25D366]"></i>
                             +88 01973 301465
                         </a>
@@ -99,10 +108,10 @@
                                 href="{{ $social['url'] }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFD700] hover:bg-[#FFC700] hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
+                                class="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-[#EBA927] hover:bg-[#EBA927]"
                                 aria-label="{{ $social['label'] }}"
                             >
-                                <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5" style="filter: brightness(0) saturate(100%) invert(14%) sepia(31%) saturate(2229%) hue-rotate(185deg) brightness(97%) contrast(92%);" alt="{{ $social['label'] }}" />
+                                <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5 opacity-90 transition-all duration-300 group-hover:opacity-100" style="filter: brightness(0) saturate(100%) invert(100%);" alt="{{ $social['label'] }}" />
                             </a>
                         @endforeach
                     </div>
@@ -111,7 +120,7 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="mt-12 border-t border-gray-700 pt-8">
+        <div class="mt-12 border-t border-white/10 pt-8">
             <!-- Payment Methods -->
             <div class="flex justify-center flex-wrap gap-3 mb-6">
                 @php
@@ -125,17 +134,17 @@
                     ];
                 @endphp
                 @foreach($payments as $payment)
-                    <div class="bg-white rounded px-3 py-2 flex items-center justify-center">
+                    <div class="flex items-center justify-center rounded-xl border border-white/10 bg-white/95 px-3 py-2 shadow-sm">
                         <img src="{{ asset('images/footer-icons/' . $payment['file']) }}" alt="{{ $payment['name'] }}" class="h-5 w-auto" />
                     </div>
                 @endforeach
             </div>
 
-            <div class="text-center text-sm text-gray-400">
+            <div class="text-center text-sm text-slate-400">
                 <p>
                     ©{{ date('Y') }} <span class="font-semibold text-white">EG Bookkeeping LLC</span>. All Rights Reserved. 
                     <span class="font-semibold text-white">EG Bookkeeping LLC</span> is the parent company of 
-                    <a href="https://cfoedge360.com" class="text-[#FFD700] hover:underline">CFO Edge360</a>
+                    <a href="https://cfoedge360.com" class="text-[#EBA927] hover:underline">CFO Edge360</a>
                 </p>
             </div>
         </div>

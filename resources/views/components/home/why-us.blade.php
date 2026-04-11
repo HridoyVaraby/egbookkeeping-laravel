@@ -18,7 +18,7 @@
     ];
 @endphp
 
-<section class="py-16 bg-white">
+<section class="bg-white py-16">
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12 max-w-3xl mx-auto">
@@ -33,14 +33,16 @@
         </div>
 
         <!-- Cards Grid -->
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="grid max-w-6xl gap-6 md:grid-cols-3 mx-auto">
             @foreach($reasons as $reason)
-                <div class="bg-gradient-to-br from-[#E8A84D] to-[#D89332] rounded-lg p-8 text-[#1a2f4d] shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                    <i data-lucide="{{ $reason['icon'] }}" class="w-8 h-8 mb-6" stroke-width="2"></i>
+                <div class="rounded-[28px] bg-gradient-to-br from-[#163253] via-[#1a4069] to-[#2374b7] p-8 text-white shadow-[0_20px_50px_rgba(22,50,83,0.18)] transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/15">
+                        <i data-lucide="{{ $reason['icon'] }}" class="h-7 w-7" stroke-width="2"></i>
+                    </div>
                     <h3 class="text-[24px] leading-[26px] font-semibold mb-5 font-display">
                         {{ $reason['title'] }}
                     </h3>
-                    <p class="text-[16px] leading-[26px] font-normal font-sans opacity-90">
+                    <p class="text-[16px] leading-[26px] font-normal font-sans text-slate-100/90">
                         {{ $reason['description'] }}
                     </p>
                 </div>
