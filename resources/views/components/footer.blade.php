@@ -7,18 +7,12 @@
         <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <!-- Brand & Description -->
             <div class="lg:col-span-1 animate-on-scroll delay-100">
-                <a href="{{ url('/') }}" class="inline-flex items-center gap-3">
-                    <div class="rounded-2xl border border-white/10 bg-white p-2 shadow-lg">
-                        <img 
-                            src="{{ asset('logo.svg') }}" 
-                            alt="EG Bookkeeping LLC" 
-                            class="h-12 w-auto"
-                        />
-                    </div>
-                    <div>
-                        <p class="font-display text-xl font-bold text-white">EG Bookkeeping LLC</p>
-                        <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#EBA927]">Smarter books. Clearer decisions.</p>
-                    </div>
+                <a href="{{ url('/') }}" class="inline-block">
+                    <img 
+                        src="{{ asset('logo.svg') }}" 
+                        alt="EG Bookkeeping LLC" 
+                        class="h-12 w-auto"
+                    />
                 </a>
                 <p class="mt-6 text-sm leading-7 text-slate-300">
                     At EG Bookkeeping LLC, we specialize in precise and reliable bookkeeping services tailored to your business needs. With years of expertise, we ensure your financials are accurate, compliant, and stress-free.
