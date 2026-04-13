@@ -110,23 +110,23 @@
                     <div class="group rounded-[24px] border {{ $cardClasses }} shadow-[0_12px_28px_rgba(15,23,42,0.06)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] transition-all duration-300">
                         {{-- Header --}}
                         <div class="p-6 text-center border-b border-gray-100">
-                            <h3 class="text-xl font-bold font-display tracking-tight text-eg-heading">{{ $category['title'] }}</h3>
+                            <h3 class="text-[24px] leading-[26px] font-semibold text-[#1F2937] font-display">{{ $category['title'] }}</h3>
                         </div>
 
                         {{-- Body --}}
                         <div class="p-8 flex-grow flex flex-col">
                             @if(isset($category['subtitle']))
-                                <p class="text-eg-heading/70 text-sm font-medium mb-6 text-center italic">
+                                <p class="text-[16px] leading-[26px] font-normal text-[#4B5563] mb-6 text-center italic">
                                     "{{ $category['subtitle'] }}"
                                 </p>
                             @endif
 
                             @if(isset($category['customOnly']) && $category['customOnly'])
                                 <div class="space-y-4 mb-8">
-                                    <h4 class="font-bold text-eg-accent text-lg font-display">{{ $category['customTitle'] }}</h4>
-                                    <p class="text-eg-body text-sm leading-relaxed">{{ $category['customDescription'] }}</p>
+                                    <h4 class="text-[18px] leading-[26px] font-semibold text-[#1F2937] mb-2 font-display">{{ $category['customTitle'] }}</h4>
+                                    <p class="text-[16px] leading-[26px] font-normal text-[#4B5563]">{{ $category['customDescription'] }}</p>
                                     @if(isset($category['contactNote']))
-                                        <p class="text-eg-body text-sm font-semibold">{{ $category['contactNote'] }}</p>
+                                        <p class="text-[16px] leading-[26px] text-[#1F2937] font-semibold">{{ $category['contactNote'] }}</p>
                                     @endif
                                 </div>
                             @else
@@ -137,8 +137,8 @@
                                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-eg-accent"></i>
                                             </div>
                                             <div>
-                                                <p class="text-eg-heading font-bold text-sm">{{ $plan['name'] }}</p>
-                                                <p class="text-eg-body text-xs line-clamp-2 leading-relaxed">{{ $plan['description'] }}</p>
+                                                <p class="text-[#1F2937] font-semibold text-[16px] leading-[26px]">{{ $plan['name'] }}</p>
+                                                <p class="text-[#4B5563] font-normal text-[14px] leading-[24px]">{{ $plan['description'] }}</p>
                                             </div>
                                         </li>
                                     @endforeach
@@ -147,14 +147,14 @@
 
                             @if(isset($category['pricing']))
                                 <div class="mt-auto p-4 bg-gray-50 rounded-lg mb-6 border border-gray-100">
-                                    <p class="text-eg-body text-xs leading-relaxed italic">
+                                    <p class="text-[#4B5563] font-normal text-[14px] leading-[24px] italic">
                                         {{ $category['pricing'] }}
                                     </p>
                                 </div>
                             @endif
 
                             @if(isset($category['customPricing']))
-                                <p class="text-eg-accent font-bold text-sm mb-6 text-center">
+                                <p class="text-[16px] leading-[26px] text-eg-accent font-semibold mb-6 text-center">
                                     {{ $category['customPricing'] }}
                                 </p>
                             @endif
@@ -175,15 +175,7 @@
         </div>
     </section>
 
-    {{-- FAQ Link Section --}}
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-eg-body mb-6">Have more questions about how our pricing works?</p>
-            <x-ui.button href="{{ route('home') }}#faq" variant="outline">
-                View Pricing FAQs
-            </x-ui.button>
-        </div>
-    </section>
+
 
     {{-- CTA --}}
     <x-home.cta />
