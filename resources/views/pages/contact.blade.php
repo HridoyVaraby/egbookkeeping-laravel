@@ -141,7 +141,7 @@
                 </div>
 
                 {{-- Right Side - Contact Info --}}
-                <div class="bg-gray-50 p-8 lg:p-10 rounded-lg">
+                <div class="rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] p-8 lg:p-10 shadow-[0_12px_28px_rgba(15,23,42,0.06)]">
                     <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
                         Let's talk
                     </h2>

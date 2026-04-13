@@ -15,10 +15,10 @@
                 <div class="flex flex-col md:flex-row items-center justify-between gap-8 p-8 md:p-12 pl-10 md:pl-16">
                     <!-- Left content -->
                     <div class="flex-1 text-left">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-display">
+                        <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
                             {!! str_replace('Bookkeeping', '<span class="text-[#FF6B35]">Bookkeeping</span>', $title) !!}
                         </h2>
-                        <p class="text-gray-600 text-base md:text-lg max-w-2xl leading-relaxed">
+                        <p class="text-eg-body text-base md:text-lg max-w-2xl leading-relaxed">
                             {{ $description }}
                         </p>
                     </div>

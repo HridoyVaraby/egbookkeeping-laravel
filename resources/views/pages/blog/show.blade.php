@@ -23,7 +23,7 @@
             @endif
 
             {{-- Post Meta --}}
-            <div class="flex items-center gap-6 text-sm text-gray-500 mb-8 border-b border-gray-100 pb-8">
+            <div class="flex items-center gap-6 text-sm text-eg-subheading mb-8 border-b border-gray-100 pb-8">
                 <div class="flex items-center gap-2">
                     <div class="w-10 h-10 rounded-full bg-eg-accent/10 flex items-center justify-center text-eg-accent">
                         <i data-lucide="user" class="w-5 h-5"></i>
@@ -54,7 +54,7 @@
             </div>
 
             {{-- Content --}}
-            <div class="prose prose-lg max-w-none prose-headings:text-eg-off-black prose-headings:font-bold prose-p:text-gray-600 prose-a:text-eg-accent prose-strong:text-eg-off-black prose-img:rounded-2xl">
+            <div class="prose prose-lg max-w-none prose-headings:text-eg-off-black prose-headings:font-bold prose-p:text-eg-body prose-a:text-eg-accent prose-strong:text-eg-off-black prose-img:rounded-2xl">
                 {!! clean($post->body) !!}
             </div>
 
@@ -66,7 +66,7 @@
                 </a>
                 
                 <div class="flex items-center gap-4">
-                    <span class="text-sm font-semibold text-gray-400">Share:</span>
+                    <span class="text-sm font-semibold text-eg-subheading">Share:</span>
                     <div class="flex gap-2">
                         <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
                             <img src="{{ asset('images/footer-icons/linkedin.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="LinkedIn" />

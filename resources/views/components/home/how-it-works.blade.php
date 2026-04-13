@@ -88,10 +88,10 @@
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="mb-16 text-center md:mb-20">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-display">
+            <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
                 How It <span class="text-[#FF6B35]">Works?</span>
             </h2>
-            <p class="mx-auto max-w-2xl text-sm text-gray-600 md:text-base">
+            <p class="mx-auto max-w-2xl text-sm text-eg-body md:text-base">
                 Getting started with EG Bookkeeping LLC is easy. Follow these simple steps to enjoy tailored,
                 hassle-free bookkeeping services.
             </p>
@@ -119,16 +119,16 @@
                                         </span>
                                         <div>
                                             <p class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1E88E5]">{{ $step['number'] }}</p>
-                                            <p class="text-xs text-gray-500">{{ $step['subtitle'] }}</p>
+                                            <p class="text-xs text-eg-subheading">{{ $step['subtitle'] }}</p>
                                         </div>
                                     </div>
                                     <h3 class="relative z-10 mt-5 text-2xl font-bold text-[#E91E63] font-display">{{ $step['title'] }}</h3>
-                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-gray-600">{{ $step['description'] }}</p>
+                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-eg-body">{{ $step['description'] }}</p>
                                 </div>
                             @else
                                 <div class="hidden pr-10 text-right md:block">
                                     <p class="text-sm font-semibold text-[#1E88E5]">{{ $step['number'] }}</p>
-                                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500">{{ $step['label'] }}</p>
+                                    <p class="text-xs uppercase tracking-[0.18em] text-eg-subheading">{{ $step['label'] }}</p>
                                 </div>
                             @endif
                         </div>
@@ -151,16 +151,16 @@
                                         </span>
                                         <div>
                                             <p class="mb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1E88E5]">{{ $step['number'] }}</p>
-                                            <p class="text-xs text-gray-500">{{ $step['subtitle'] }}</p>
+                                            <p class="text-xs text-eg-subheading">{{ $step['subtitle'] }}</p>
                                         </div>
                                     </div>
                                     <h3 class="relative z-10 mt-5 text-2xl font-bold text-[#E91E63] font-display">{{ $step['title'] }}</h3>
-                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-gray-600">{{ $step['description'] }}</p>
+                                    <p class="relative z-10 mt-3 max-w-sm text-sm leading-7 text-eg-body">{{ $step['description'] }}</p>
                                 </div>
                             @else
                                 <div class="hidden pl-10 text-left md:block">
                                     <p class="text-sm font-semibold text-[#1E88E5]">{{ $step['number'] }}</p>
-                                    <p class="text-xs uppercase tracking-[0.18em] text-gray-500">{{ $step['label'] }}</p>
+                                    <p class="text-xs uppercase tracking-[0.18em] text-eg-subheading">{{ $step['label'] }}</p>
                                 </div>
                             @endif
                         </div>

@@ -11,7 +11,7 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {{-- Our Vision --}}
-            <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-eg-accent hover:shadow-md transition-shadow">
+            <div class="group p-8 rounded-[24px] border border-[#F6E7C6] bg-gradient-to-b from-white to-[#fff9ef] shadow-[0_12px_28px_rgba(15,23,42,0.06)] hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] transition-all duration-300">
                 <h3 class="text-2xl font-bold text-eg-accent mb-4 font-display">
                     Our Vision
                 </h3>
@@ -21,7 +21,7 @@
             </div>
 
             {{-- Our Mission --}}
-            <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-eg-primary hover:shadow-md transition-shadow">
+            <div class="group p-8 rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] shadow-[0_12px_28px_rgba(15,23,42,0.06)] hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] transition-all duration-300">
                 <h3 class="text-2xl font-bold text-eg-heading mb-4 font-display">
                     Our Mission
                 </h3>

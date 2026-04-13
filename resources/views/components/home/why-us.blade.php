@@ -25,7 +25,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
                 Why <span class="text-eg-accent">Choose</span> Us
             </h2>
-            <p class="text-[18px] leading-[26px] font-sans text-[#4B5563]">
+            <p class="text-[18px] leading-[26px] font-sans text-eg-body">
                 We go beyond numbers to deliver tailored, reliable, and precise bookkeeping 
                 solutions. Discover why businesses trust us to manage their finances with confidence 
                 and care.
@@ -47,10 +47,10 @@
                     <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl {{ $iconClasses }}">
                         <i data-lucide="{{ $reason['icon'] }}" class="h-7 w-7" stroke-width="2"></i>
                     </div>
-                    <h3 class="text-[24px] leading-[26px] text-slate-800 font-semibold mb-5 font-display">
+                    <h3 class="text-[24px] leading-[26px] text-eg-heading font-semibold mb-5 font-display">
                         {{ $reason['title'] }}
                     </h3>
-                    <p class="text-[16px] leading-[26px] font-normal font-sans text-slate-600">
+                    <p class="text-[16px] leading-[26px] font-normal font-sans text-eg-body">
                         {{ $reason['description'] }}
                     </p>
                 </div>

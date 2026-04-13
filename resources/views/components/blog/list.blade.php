@@ -6,7 +6,7 @@
             <h2 class="text-4xl md:text-5xl font-bold text-eg-off-black mb-4">
                 Latest <span class="text-eg-accent italic">Posts</span>
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="text-lg text-eg-body max-w-2xl mx-auto">
                 Insights, tips, and stories from our team of bookkeeping experts.
             </p>
         </div>
@@ -29,7 +29,7 @@
                         </div>
                         
                         <div class="p-6 flex-grow flex flex-col">
-                            <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                            <div class="flex items-center gap-3 text-xs text-eg-subheading mb-3">
                                 <span class="flex items-center gap-1">
                                     <i data-lucide="user" class="w-3 h-3"></i>
                                     EGBookkeeping
@@ -44,7 +44,7 @@
                                 {{ $post->title }}
                             </h3>
                             
-                            <p class="text-sm text-gray-600 line-clamp-3">
+                            <p class="text-sm text-eg-body line-clamp-3">
                                 {{ $post->excerpt }}
                             </p>
                         </div>
@@ -52,7 +52,7 @@
                 </a>
             @empty
                 <div class="col-span-full text-center py-12">
-                    <p class="text-gray-500">No blog posts found at the moment.</p>
+                    <p class="text-eg-body">No blog posts found at the moment.</p>
                 </div>
             @endforelse
         </div>

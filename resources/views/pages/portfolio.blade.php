@@ -47,9 +47,14 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-                @foreach($projects as $project)
+                @foreach($projects as $index => $project)
+                    @php
+                        $cardClasses = $index % 2 == 1 
+                            ? 'border-[#F6E7C6] bg-gradient-to-b from-white to-[#fff9ef]' 
+                            : 'border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff]';
+                    @endphp
                     <div class="group cursor-pointer">
-                        <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
+                        <div class="{{ $cardClasses }} rounded-[24px] overflow-hidden shadow-[0_12px_28px_rgba(15,23,42,0.06)] hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] transition-all duration-300 border h-full flex flex-col">
                             {{-- Project Image --}}
                             <div class="aspect-video overflow-hidden relative">
                                 <img

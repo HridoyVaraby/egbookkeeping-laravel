@@ -42,10 +42,10 @@
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-display">
+            <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
                 Frequently Asked <span class="text-[#FF6B35] italic">Questions</span>
             </h2>
-            <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
+            <p class="text-eg-body max-w-3xl mx-auto text-sm md:text-base">
                 Got questions about our bookkeeping services? Here are some common inquiries to help you understand how we work and what we offer.
             </p>
         </div>
@@ -62,7 +62,7 @@
                         class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
                         :class="{ 'bg-gray-50': openIndex === {{ $index }} }"
                     >
-                        <span class="text-gray-900 font-semibold text-base md:text-lg pr-4 font-display">
+                        <span class="text-eg-heading font-semibold text-base md:text-lg pr-4 font-display">
                             {{ $faq['question'] }}
                         </span>
                         <span class="flex-shrink-0 text-[#FF6B35]">
@@ -79,7 +79,7 @@
                         x-transition:enter-end="opacity-100 translate-y-0"
                         class="px-5 pb-5 pt-2 bg-gray-50"
                     >
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                        <p class="text-eg-body text-sm md:text-base leading-relaxed">
                             {{ $faq['answer'] }}
                         </p>
                     </div>

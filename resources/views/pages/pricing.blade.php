@@ -102,10 +102,15 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 @foreach($pricingData as $category)
-                    <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300">
+                    @php
+                        $cardClasses = $loop->index % 2 == 1 
+                            ? 'border-[#F6E7C6] bg-gradient-to-b from-white to-[#fff9ef]' 
+                            : 'border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff]';
+                    @endphp
+                    <div class="group rounded-[24px] border {{ $cardClasses }} shadow-[0_12px_28px_rgba(15,23,42,0.06)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] transition-all duration-300">
                         {{-- Header --}}
-                        <div class="{{ $category['bgColor'] }} text-white p-6 text-center">
-                            <h3 class="text-xl font-bold font-display tracking-tight">{{ $category['title'] }}</h3>
+                        <div class="p-6 text-center border-b border-gray-100">
+                            <h3 class="text-xl font-bold font-display tracking-tight text-eg-heading">{{ $category['title'] }}</h3>
                         </div>
 
                         {{-- Body --}}

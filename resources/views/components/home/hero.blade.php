@@ -38,7 +38,7 @@
                     <a href="https://calendly.com/md-reazul-haque/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-3 text-base font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-[#EBA927] hover:text-[#163253]">Book a Discovery Call</a>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-6 text-sm text-slate-500 animate-on-scroll delay-400">
+                <div class="flex flex-wrap items-center gap-6 text-sm text-eg-subheading animate-on-scroll delay-400">
                     <div class="inline-flex items-center gap-2">
                         <i data-lucide="shield-check" class="h-4 w-4 text-[#1E88E5]"></i>
                         Secure, cloud-based workflows
@@ -66,7 +66,7 @@
                             </div>
                             <div>
                                 <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Specialized</p>
-                                <p class="mt-1 text-base font-semibold leading-7 text-slate-800">Legal, real estate, and SMB bookkeeping</p>
+                                <p class="mt-1 text-base font-semibold leading-7 text-eg-heading">Legal, real estate, and SMB bookkeeping</p>
                             </div>
                         </div>
 
@@ -77,7 +77,7 @@
                             </div>
                             <div class="mt-6">
                                 <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d79517]">Platforms</p>
-                                <p class="mt-2 text-base font-semibold leading-7 text-slate-800">QuickBooks Online and Xero experts</p>
+                                <p class="mt-2 text-base font-semibold leading-7 text-eg-heading">QuickBooks Online and Xero experts</p>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@
                             </div>
                             <div class="mt-6">
                                 <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Delivery</p>
-                                <p class="mt-2 text-base font-semibold leading-7 text-slate-800">Timely reports and clear communication</p>
+                                <p class="mt-2 text-base font-semibold leading-7 text-eg-heading">Timely reports and clear communication</p>
                             </div>
                         </div>
                     </div>
