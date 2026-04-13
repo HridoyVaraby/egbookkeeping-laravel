@@ -58,27 +58,38 @@
                         alt="EG Bookkeeping Services" 
                         class="w-full h-auto object-contain rounded-2xl shadow-xl transition-transform duration-700 hover:scale-[1.02]"
                     />
-                    <div class="mt-6 grid gap-4 sm:grid-cols-3 animate-on-scroll delay-300">
-                        <div class="group rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] p-4 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)]">
-                            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EEF6FF] text-[#2374b7]">
+                    <div class="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2 animate-on-scroll delay-300">
+                        <!-- Horizontal Card (Specialized) -->
+                        <div class="group sm:col-span-2 rounded-[24px] border border-[#E7EEF7] bg-gradient-to-r from-white to-[#f8fbff] p-5 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#EEF6FF] text-[#2374b7]">
                                 <i data-lucide="briefcase-business" class="h-5 w-5"></i>
                             </div>
-                            <p class="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Specialized</p>
-                            <p class="mt-2 text-base font-semibold leading-7 text-slate-800">Legal, real estate, and SMB bookkeeping</p>
+                            <div>
+                                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Specialized</p>
+                                <p class="mt-1 text-base font-semibold leading-7 text-slate-800">Legal, real estate, and SMB bookkeeping</p>
+                            </div>
                         </div>
-                        <div class="group rounded-[24px] border border-[#F6E7C6] bg-gradient-to-b from-white to-[#fff9ef] p-4 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)]">
+
+                        <!-- Vertical Card 1 (Platforms) -->
+                        <div class="group rounded-[24px] border border-[#F6E7C6] bg-gradient-to-b from-white to-[#fff9ef] p-5 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] flex flex-col justify-between">
                             <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#FFF4E4] text-[#EBA927]">
                                 <i data-lucide="badge-check" class="h-5 w-5"></i>
                             </div>
-                            <p class="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d79517]">Platforms</p>
-                            <p class="mt-2 text-base font-semibold leading-7 text-slate-800">QuickBooks Online and Xero experts</p>
+                            <div class="mt-6">
+                                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d79517]">Platforms</p>
+                                <p class="mt-2 text-base font-semibold leading-7 text-slate-800">QuickBooks Online and Xero experts</p>
+                            </div>
                         </div>
-                        <div class="group rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] p-4 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)]">
+
+                        <!-- Vertical Card 2 (Delivery) -->
+                        <div class="group rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] p-5 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)] flex flex-col justify-between">
                             <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EEF6FF] text-[#2374b7]">
                                 <i data-lucide="clock-3" class="h-5 w-5"></i>
                             </div>
-                            <p class="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Delivery</p>
-                            <p class="mt-2 text-base font-semibold leading-7 text-slate-800">Timely reports and clear communication</p>
+                            <div class="mt-6">
+                                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1E88E5]">Delivery</p>
+                                <p class="mt-2 text-base font-semibold leading-7 text-slate-800">Timely reports and clear communication</p>
+                            </div>
                         </div>
                     </div>
                 </div>
