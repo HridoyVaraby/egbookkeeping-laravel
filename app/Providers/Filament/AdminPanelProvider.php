@@ -26,19 +26,28 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandLogo(fn () => asset('logo.svg'))
+            ->brandLogoHeight('2rem')
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::SIDEBAR_NAV_END,
+                fn (): \Illuminate\Contracts\View\View => view('filament.sidebar-footer')
+            )
+            ->renderHook(
+                \Filament\View\PanelsRenderHook::HEAD_END,
+                fn (): \Illuminate\Contracts\View\View => view('filament.custom-css')
+            )
             ->login()
+            ->darkMode(false)
             ->colors([
                 'primary' => Color::Amber,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
