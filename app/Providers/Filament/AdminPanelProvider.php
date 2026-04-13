@@ -36,6 +36,7 @@ class AdminPanelProvider extends PanelProvider
                 \Filament\View\PanelsRenderHook::HEAD_END,
                 fn (): \Illuminate\Contracts\View\View => view('filament.custom-css')
             )
+            ->maxContentWidth(\Filament\Support\Enums\MaxWidth::Full)
             ->login()
             ->darkMode(false)
             ->colors([
