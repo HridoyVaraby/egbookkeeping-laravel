@@ -27,7 +27,7 @@
                         <span class="text-eg-heading">Send Us a </span>
                         <span class="text-eg-accent italic">Message</span>
                     </h2>
-                    <p class="text-eg-body text-sm mb-8">
+                    <p class="text-[#4B5563] text-[16px] leading-[26px] mb-8 font-normal">
                         Have a question or need assistance? Fill out the form below, and we'll get back to you as soon as possible. Your inquiries are important to us!
                     </p>
 
@@ -41,7 +41,7 @@
                         @csrf
                         
                         <div>
-                            <label for="name" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                            <label for="name" class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-2 block font-sans">
                                 Full Name <span class="text-red-500">*</span>
                             </label>
                             <input 
@@ -58,7 +58,7 @@
 
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="email" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                <label for="email" class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-2 block font-sans">
                                     Email <span class="text-red-500">*</span>
                                 </label>
                                 <input 
@@ -74,7 +74,7 @@
                             </div>
 
                             <div>
-                                <label for="phone" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                                <label for="phone" class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-2 block font-sans">
                                     Phone Number
                                 </label>
                                 <input 
@@ -90,7 +90,7 @@
                         </div>
 
                         <div>
-                            <label for="project_type" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                            <label for="project_type" class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-2 block font-sans">
                                 Service Requested <span class="text-red-500">*</span>
                             </label>
                             <select 
@@ -111,7 +111,7 @@
                         </div>
 
                         <div>
-                            <label for="message" class="text-eg-heading font-semibold text-sm mb-2 block font-display">
+                            <label for="message" class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-2 block font-sans">
                                 Your Message <span class="text-red-500">*</span>
                             </label>
                             <textarea
@@ -133,7 +133,7 @@
                             >
                                 Submit Request
                             </x-ui.button>
-                            <p class="text-center text-xs text-gray-400 mt-4 italic">
+                            <p class="text-center text-[14px] leading-[24px] text-[#4B5563] mt-4 italic font-sans">
                                 We usually respond within 24 business hours.
                             </p>
                         </div>
@@ -142,10 +142,10 @@
 
                 {{-- Right Side - Contact Info --}}
                 <div class="rounded-[24px] border border-[#E7EEF7] bg-gradient-to-b from-white to-[#f8fbff] p-8 lg:p-10 shadow-[0_12px_28px_rgba(15,23,42,0.06)]">
-                    <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#1F2937] mb-4 font-display">
                         Let's talk
                     </h2>
-                    <p class="text-eg-body text-sm leading-relaxed mb-8">
+                    <p class="text-[#4B5563] text-[16px] leading-[26px] font-normal mb-8">
                         Prefer a more direct approach? Reach out to us via email or phone, and our team will be happy to assist you with your bookkeeping needs. We're here to provide answers and support, ensuring a smooth and seamless experience.
                     </p>
 
@@ -156,8 +156,8 @@
                                 <i data-lucide="map-pin" class="w-5 h-5 text-eg-accent"></i>
                             </div>
                             <div>
-                                <p class="text-eg-heading font-semibold text-sm mb-1 font-display">Office Address</p>
-                                <p class="text-eg-body text-sm leading-relaxed">
+                                <p class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-1 font-sans">Office Address</p>
+                                <p class="text-[#4B5563] text-[16px] leading-[26px] font-normal">
                                     1209 MOUNTAIN ROAD PL NE, STE R, ALBUQUERQUE, NM 87110, USA
                                 </p>
                             </div>
@@ -169,12 +169,12 @@
                                 <i data-lucide="mail" class="w-5 h-5 text-eg-accent"></i>
                             </div>
                             <div>
-                                <p class="text-eg-heading font-semibold text-sm mb-1 font-display">Email Us</p>
+                                <p class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-1 font-sans">Email Us</p>
                                 <div class="space-y-1">
-                                    <a href="mailto:reaaz@egbookkeeping.com" class="text-eg-body text-sm hover:text-eg-accent block transition-colors">
+                                    <a href="mailto:reaaz@egbookkeeping.com" class="text-[#4B5563] text-[16px] leading-[26px] font-normal hover:text-eg-accent block transition-colors">
                                         reaaz@egbookkeeping.com
                                     </a>
-                                    <a href="mailto:support@egbookkeeping.com" class="text-eg-body text-sm hover:text-eg-accent block transition-colors">
+                                    <a href="mailto:support@egbookkeeping.com" class="text-[#4B5563] text-[16px] leading-[26px] font-normal hover:text-eg-accent block transition-colors">
                                         support@egbookkeeping.com
                                     </a>
                                 </div>
@@ -187,8 +187,8 @@
                                 <i data-lucide="phone" class="w-5 h-5 text-eg-accent"></i>
                             </div>
                             <div>
-                                <p class="text-eg-heading font-semibold text-sm mb-1 font-display">Call Us</p>
-                                <a href="tel:+15055232471" class="text-eg-body text-sm hover:text-eg-accent block transition-colors">
+                                <p class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-1 font-sans">Call Us</p>
+                                <a href="tel:+15055232471" class="text-[#4B5563] text-[16px] leading-[26px] font-normal hover:text-eg-accent block transition-colors">
                                     +1 505 523 2471
                                 </a>
                             </div>
@@ -200,8 +200,8 @@
                                 <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i>
                             </div>
                             <div>
-                                <p class="text-eg-heading font-semibold text-sm mb-1 font-display">WhatsApp</p>
-                                <a href="https://wa.me/8801973301465" class="text-eg-body text-sm hover:text-green-600 block transition-colors">
+                                <p class="text-[#1F2937] font-semibold text-[16px] leading-[26px] mb-1 font-sans">WhatsApp</p>
+                                <a href="https://wa.me/8801973301465" class="text-[#4B5563] text-[16px] leading-[26px] font-normal hover:text-green-600 block transition-colors">
                                     +88 01973 301465
                                 </a>
                             </div>
