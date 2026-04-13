@@ -16,9 +16,7 @@
         :breadcrumbs="$breadcrumbs"
     />
 
-    <div class="py-12">
-        <x-home.industries />
-    </div>
+    <x-home.industries :show-header="false" />
     
     <x-home.cta />
 </x-layouts.app>

@@ -1,6 +1,9 @@
+@props(['showHeader' => true])
+
 <section id="industries" class="py-16 bg-gray-50 scroll-mt-20">
     <div class="container mx-auto px-4">
         <!-- Header -->
+        @if($showHeader)
         <div class="text-center mb-12 animate-on-scroll">
             <h2 class="text-3xl md:text-4xl font-bold mb-2 font-display">
                 We Specialize <span class="text-eg-accent">In</span>
@@ -9,6 +12,7 @@
                 Tailored bookkeeping services designed to meet the unique needs of your industry.
             </p>
         </div>
+        @endif
 
         <!-- Industry Cards -->
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
