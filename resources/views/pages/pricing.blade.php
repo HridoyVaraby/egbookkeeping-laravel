@@ -172,33 +172,35 @@
                     </div>
                 @endforeach
             </div>
-
-            {{-- Dynamic Pricing Notice --}}
-            @php
-                $pricingNoticeEnabled = \App\Models\Setting::where('key', 'pricing_notice_enabled')->value('value') === '1';
-                $pricingNoticeContent = \App\Models\Setting::where('key', 'pricing_notice_content')->value('value');
-            @endphp
-
-            @if($pricingNoticeEnabled && !empty(trim(strip_tags($pricingNoticeContent))))
-                <div class="mt-20 max-w-4xl mx-auto rounded-2xl bg-gradient-to-br from-[#fff9ef] to-white border border-[#F6E7C6] shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden relative transition-all duration-300 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)]">
-                    <!-- Decorative element -->
-                    <div class="absolute top-0 left-0 w-1.5 h-full bg-eg-accent"></div>
-                    
-                    <div class="p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start gap-6">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-full bg-[#fceac4] flex items-center justify-center border border-[#F6E7C6] shadow-inner mb-2 md:mb-0">
-                            <i data-lucide="info" class="w-6 h-6 text-eg-accent"></i>
-                        </div>
-                        <div class="flex-1 text-center md:text-left">
-                            <h4 class="text-xl font-bold font-display text-eg-heading mb-3">Pricing Notice</h4>
-                            <div class="prose prose-sm md:prose-base max-w-none text-[#4B5563] prose-p:leading-relaxed prose-a:text-eg-accent">
-                                {!! $pricingNoticeContent !!}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endif
         </div>
     </section>
+
+    {{-- Dynamic Pricing Notice Section --}}
+    @php
+        $pricingNoticeEnabled = \App\Models\Setting::where('key', 'pricing_notice_enabled')->value('value') === '1';
+        $pricingNoticeContent = \App\Models\Setting::where('key', 'pricing_notice_content')->value('value');
+    @endphp
+
+    @if($pricingNoticeEnabled && !empty(trim(strip_tags($pricingNoticeContent))))
+        <section class="py-16 md:py-20 bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 max-w-7xl text-left">
+                <h2 class="text-3xl font-bold font-display text-[#1F2937] mb-6 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-blue-600"></i>
+                    </span>
+                    Pricing Notice
+                </h2>
+                <div class="prose prose-lg max-w-none text-[#4B5563] border-4 border-red-500
+                    prose-headings:font-display prose-headings:font-bold prose-headings:text-[#1F2937]
+                    prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-8
+                    prose-p:leading-relaxed prose-p:mb-4
+                    prose-strong:text-[#1F2937] prose-strong:font-bold
+                    prose-ul:list-disc prose-ul:ml-6 prose-li:mb-2">
+                    {!! $pricingNoticeContent !!}
+                </div>
+            </div>
+        </section>
+    @endif
 
 
 
