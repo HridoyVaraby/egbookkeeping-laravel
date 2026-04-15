@@ -20,7 +20,7 @@
     {{-- Content --}}
     <x-ui.legal-content>
         <p>
-            EG Bookkeeping LLC ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website (www.egbookkeeping.com) or engage with our services.
+            EG Bookkeeping LLC (“we,” “us,” or “our”) is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website (www.egbookkeeping.com) or engage with our services.
         </p>
 
         <h2>1. Information We Collect</h2>
@@ -71,6 +71,12 @@
         <p>
             We treat all sensitive information — including tax documents, payroll records, financial statements, and identity details — with strict confidentiality, in line with IRS requirements and applicable data protection laws.
         </p>
+        <p>
+            While we do everything reasonably possible to secure your data, no system is completely immune to risks. We also recommend that you follow safe practices when sharing or accessing documents.
+        </p>
+        <p>
+            By working with EG Bookkeeping LLC, you can be confident that your bookkeeping, payroll, and tax information is handled with the highest level of security, care, and professionalism.
+        </p>
 
         <h2>6. Your Rights</h2>
         <p>
@@ -85,7 +91,12 @@
             To exercise these rights, contact us at <a href="mailto:support@egbookkeeping.com">support@egbookkeeping.com</a>.
         </p>
 
-        <h2>7. Contact Us</h2>
+        <h2>7. Third-Party Links</h2>
+        <p>
+            Our website may contain links to third-party websites. We are not responsible for the privacy practices of these websites.
+        </p>
+
+        <h2>8. Contact Us</h2>
         <p>
             If you have any questions about this Privacy Policy or how we handle your data, please contact us at:
         </p>

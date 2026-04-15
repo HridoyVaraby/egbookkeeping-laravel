@@ -20,7 +20,7 @@
     {{-- Content --}}
     <x-ui.legal-content>
         <p>
-            Welcome to EG Bookkeeping LLC ("we," "our," or "us"). These Terms & Conditions govern your access to and use of our website (www.egbookkeeping.com) and services. By using our website or engaging our services, you agree to comply with these terms.
+            Welcome to EG Bookkeeping LLC (“we,” “our,” or “us”). These Terms & Conditions govern your access to and use of our website (www.egbookkeeping.com) and services. By using our website or engaging our services, you agree to comply with these terms. If you do not agree, please refrain from using our website or services.
         </p>
 
         <h2>1. Acceptance of Terms</h2>
@@ -34,18 +34,19 @@
         </p>
         <ul>
             <li>Catch-up and clean-up bookkeeping.</li>
-            <li>Monthly bookkeeping for startups and small businesses.</li>
-            <li>Real Estate and Legal (IOLTA) bookkeeping.</li>
-            <li>Payroll & US Tax Services.</li>
+            <li>Monthly bookkeeping.</li>
+            <li>Real Estate bookkeeping.</li>
+            <li>Legal bookkeeping.</li>
+            <li>Payroll & US Tax Services</li>
         </ul>
         <p>
-            Our services are subject to the specific scope outlined in your signed service agreement.
+            Our services are subject to the scope outlined in your agreement with us.
         </p>
 
         <h2>3. Use of the Website</h2>
         <ul>
-            <li>You agree to use the website only for lawful purposes.</li>
-            <li>You shall not use the website to distribute harmful or unlawful content.</li>
+            <li>You agree to use the website only for lawful purposes and in compliance with applicable laws.</li>
+            <li>You shall not use the website to distribute harmful, unlawful, or inappropriate content.</li>
             <li>Unauthorized access, such as hacking or data mining, is strictly prohibited.</li>
         </ul>
 
@@ -58,22 +59,45 @@
 
         <h2>5. Intellectual Property</h2>
         <ul>
-            <li>All content on our website, including text, logos, and design, is the intellectual property of EG Bookkeeping LLC.</li>
-            <li>You may not reproduce or use our content without prior written consent.</li>
+            <li>All content on our website, including text, images, logos, and design, is the intellectual property of EG Bookkeeping LLC.</li>
+            <li>You may not reproduce, distribute, or use our content without prior written consent.</li>
         </ul>
 
         <h2>6. Limitation of Liability</h2>
         <ul>
-            <li>EG Bookkeeping LLC is not liable for indirect or consequential damages arising from the use of our services.</li>
-            <li>We are not responsible for errors caused by inaccurate information provided by clients.</li>
+            <li>EG Bookkeeping LLC is not liable for any indirect, incidental, or consequential damages arising from the use of our website or services.</li>
+            <li>We are not responsible for errors or delays caused by inaccurate or incomplete information provided by clients.</li>
         </ul>
 
-        <h2>7. Governing Law</h2>
+        <h2>7. Termination of Services</h2>
+        <p>
+            We reserve the right to terminate services if terms are violated, payments are not received, or if deemed necessary for legal or ethical reasons.
+        </p>
+        <p>
+            Clients may terminate services as outlined in our Cancellation Policy.
+        </p>
+
+        <h2>8. Third-Party Links</h2>
+        <p>
+            Our website may include links to third-party websites or resources. EG Bookkeeping LLC is not responsible for the content, accuracy, or policies of third-party websites.
+        </p>
+
+        <h2>9. Privacy Policy</h2>
+        <p>
+            Your use of our website is also governed by our Privacy Policy, which outlines how we collect, use, and protect your information.
+        </p>
+
+        <h2>10. Changes to Terms</h2>
+        <p>
+            We reserve the right to update or modify these Terms & Conditions at any time. Changes will be effective immediately upon posting on this page. It is your responsibility to review these terms periodically.
+        </p>
+
+        <h2>11. Governing Law</h2>
         <p>
             These Terms & Conditions are governed by and construed in accordance with the laws of <strong>New Mexico, USA</strong>. Any disputes shall be resolved in the courts of New Mexico, USA.
         </p>
 
-        <h2>8. Contact Us</h2>
+        <h2>12. Contact Us</h2>
         <p>
             If you have any questions about these Terms & Conditions, please contact us at:
         </p>

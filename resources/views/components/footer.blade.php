@@ -52,6 +52,7 @@
                 <h3 class="mb-6 text-lg font-bold text-white">Important Links</h3>
                 <ul class="space-y-3">
                     <li><a href="{{ route('legal.privacy') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="{{ route('legal.cookies') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Cookie Policy</a></li>
                     <li><a href="{{ route('legal.terms') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Terms & Conditions</a></li>
                     <li><a href="{{ route('legal.refund') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Cancellation & Refund Policy</a></li>
                 </ul>

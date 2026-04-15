@@ -51,6 +51,10 @@ Route::prefix('legal')->name('legal.')->group(function () {
         return view('pages.legal.privacy');
     })->name('privacy');
 
+    Route::get('/cookie-policy', function () {
+        return view('pages.legal.cookies');
+    })->name('cookies');
+
     Route::get('/terms-conditions', function () {
         return view('pages.legal.terms');
     })->name('terms');
