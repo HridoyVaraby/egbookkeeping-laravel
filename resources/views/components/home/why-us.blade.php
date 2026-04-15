@@ -33,7 +33,7 @@
         </div>
 
         <!-- Cards Grid -->
-        <div class="grid max-w-6xl gap-6 md:grid-cols-3 mx-auto">
+        <div class="grid gap-6 md:grid-cols-3">
             @foreach($reasons as $index => $reason)
                 @php
                     $cardClasses = $index % 2 == 1 

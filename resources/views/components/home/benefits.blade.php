@@ -47,7 +47,7 @@
         </div>
 
         <!-- Benefits Grid -->
-        <div class="grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3 mx-auto">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach($benefits as $benefit)
                 <div class="rounded-[26px] border border-slate-100 bg-white p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.1)]">
                     <div class="flex gap-4">
