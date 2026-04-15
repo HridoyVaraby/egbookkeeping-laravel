@@ -32,7 +32,7 @@
             @endphp
 
             @foreach($industries as $industry)
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-{{ ($loop->index + 1) * 100 }}">
+                <div class="h-full flex flex-col bg-white rounded-xl p-10 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-on-scroll delay-{{ ($loop->index + 1) * 100 }}">
                     <div class="flex flex-col items-center text-center">
                         <!-- Icon -->
                         <div class="w-20 h-20 rounded-full border-2 border-eg-accent flex items-center justify-center mb-6">

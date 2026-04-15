@@ -43,7 +43,7 @@
                         ? 'bg-[#FFF4E4] text-[#EBA927]' 
                         : 'bg-[#EEF6FF] text-[#2374b7]';
                 @endphp
-                <div class="group rounded-[24px] border {{ $cardClasses }} p-8 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)]">
+                <div class="group flex flex-col h-full rounded-[24px] border {{ $cardClasses }} p-10 shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(15,23,42,0.1)]">
                     <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl {{ $iconClasses }}">
                         <i data-lucide="{{ $reason['icon'] }}" class="h-7 w-7" stroke-width="2"></i>
                     </div>

@@ -103,7 +103,7 @@
         <!-- Services Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($services as $service)
-                <div class="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:shadow-lg animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
+                <div class="flex flex-col h-full bg-white rounded-xl p-10 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:shadow-lg animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                     <!-- Icon -->
                     <div class="mb-6 flex justify-start">
                         <!-- Outer white circle with border -->
@@ -154,7 +154,7 @@
 
                     <!-- CTA Text -->
                     @if(isset($service['cta']))
-                        <div class="flex items-start">
+                        <div class="mt-auto pt-6 flex items-start">
                             <!-- Optional icon based on index could go here, omitting to keep strictly to data -->
                             <p class="text-[16px] leading-[26px] font-sans text-[#4B5563]">
                                 @php
