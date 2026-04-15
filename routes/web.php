@@ -18,6 +18,10 @@ Route::get('/services', function () {
     return view('pages.services');
 })->name('services');
 
+Route::get('/how-it-works', function () {
+    return view('pages.how-it-works');
+})->name('how-it-works');
+
 Route::get('/industries', function () {
     return view('pages.industries');
 })->name('industries');

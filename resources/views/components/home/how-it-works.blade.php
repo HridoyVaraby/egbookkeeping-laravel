@@ -1,3 +1,4 @@
+@props(['showHeader' => true])
 @php
     $steps = [
         [
@@ -86,6 +87,7 @@
 
 <section class="bg-gradient-to-b from-white to-slate-50 py-16 md:py-24">
     <div class="container mx-auto px-4">
+        @if($showHeader)
         <!-- Header -->
         <div class="mb-16 text-center md:mb-20">
             <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
@@ -96,6 +98,7 @@
                 hassle-free bookkeeping services.
             </p>
         </div>
+        @endif
 
         <!-- Timeline -->
         <div class="relative mx-auto max-w-5xl">

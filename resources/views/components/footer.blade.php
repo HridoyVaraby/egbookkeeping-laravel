@@ -32,7 +32,7 @@
                 <ul class="space-y-3">
                     <li><a href="{{ url('/') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Home</a></li>
                     <li><a href="{{ url('/services') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Services</a></li>
-                    <li><a href="{{ url('/how-it-works') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">How It Works</a></li>
+                    <li><a href="{{ route('how-it-works') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">How It Works</a></li>
                     <li><a href="{{ url('/blog') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Tools and Tips</a></li>
                     <li>
                         <a 
