@@ -49,28 +49,28 @@
                 </div>
 
                 {{-- Bio Text --}}
-                <p class="text-eg-heading text-xl md:text-2xl leading-relaxed mb-8 font-display italic font-medium">
+                <p class="text-[#1F2937] text-xl md:text-2xl leading-relaxed mb-8 font-display italic font-medium">
                     I am a seasoned bookkeeping professional with certifications in 
                     <span class="text-eg-accent">QuickBooks Online</span> and 
                     <span class="text-eg-accent">Xero Advisor</span>. With a passion for precision and a deep understanding of accounting software, I founded 
-                    <span class="text-eg-heading">EG Bookkeeping LLC</span> to provide reliable, client-focused services tailored to meet the unique needs of each business.
+                    <span class="text-[#1F2937] font-bold">EG Bookkeeping LLC</span> to provide reliable, client-focused services tailored to meet the unique needs of each business.
                 </p>
 
                 {{-- Highlights Grid --}}
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:border-eg-accent transition-colors">
                         <i data-lucide="award" class="w-6 h-6 text-eg-accent mb-2"></i>
-                        <h5 class="text-sm font-bold text-eg-heading font-display">QuickBooks Pro</h5>
+                        <h5 class="text-sm font-bold text-[#1F2937] font-display">QuickBooks Pro</h5>
                         <p class="text-xs text-eg-body">Advanced Certified</p>
                     </div>
                     <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:border-eg-accent transition-colors">
                         <i data-lucide="check-circle" class="w-6 h-6 text-eg-accent mb-2"></i>
-                        <h5 class="text-sm font-bold text-eg-heading font-display">Xero Advisor</h5>
+                        <h5 class="text-sm font-bold text-[#1F2937] font-display">Xero Advisor</h5>
                         <p class="text-xs text-eg-body">Certified Partner</p>
                     </div>
                     <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:border-eg-accent transition-colors">
                         <i data-lucide="calendar" class="w-6 h-6 text-eg-accent mb-2"></i>
-                        <h5 class="text-sm font-bold text-eg-heading font-display">15+ Years</h5>
+                        <h5 class="text-sm font-bold text-[#1F2937] font-display">15+ Years</h5>
                         <p class="text-xs text-eg-body">Financial Expertise</p>
                     </div>
                 </div>
