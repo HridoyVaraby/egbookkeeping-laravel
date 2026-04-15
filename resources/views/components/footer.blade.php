@@ -94,7 +94,6 @@
                         @php
                             $socials = [
                                 ['label' => 'Facebook', 'url' => 'https://www.facebook.com/Bookkeeper.reaz/', 'icon' => 'facebook.svg'],
-                                ['label' => 'Twitter', 'url' => 'https://x.com/Md01713', 'icon' => 'x.svg'],
                                 ['label' => 'LinkedIn', 'url' => 'https://www.linkedin.com/company/egbookkeepingllc', 'icon' => 'linkedin.svg'],
                             ];
                         @endphp
