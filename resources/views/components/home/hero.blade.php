@@ -31,11 +31,11 @@
                     <x-ui.button 
                         href="{{ url('/contact') }}" 
                         size="lg"
-                        class="rounded-full bg-eg-button px-8 py-3 text-base font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-eg-primary hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-eg-primary"
+                        class="rounded-xl bg-eg-button px-8 py-3 text-base font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-eg-primary hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-eg-primary"
                     >
                         Let's Get Started
                     </x-ui.button>
-                    <a href="https://calendly.com/md-reazul-haque/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-3 text-base font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-[#EBA927] hover:text-[#163253]">Book a Discovery Call</a>
+                    <a href="https://calendly.com/md-reazul-haque/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-3 text-base font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-[#EBA927] hover:text-[#163253]">Book a Discovery Call</a>
                 </div>
 
                 <div class="flex flex-wrap items-center gap-6 text-sm text-eg-subheading animate-on-scroll delay-400">
