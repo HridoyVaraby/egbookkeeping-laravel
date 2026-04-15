@@ -4,7 +4,7 @@
         [
             'icon' => asset('images/service-icons/Catch-Up-Clean-Up.png'),
             'title' => 'Catch-Up & Clean-Up Bookkeeping',
-            'description' => "Behind on your books? We'll bring you up to date—fast. Get a full year's bookkeeping done in just 2–3 weeks for stress-free tax filing and peace of mind.",
+            'description' => "Behind on your books? We'll bring you up to date - fast. Get a full year's bookkeeping done in just 2-3 weeks for stress-free tax filing and peace of mind.",
             'idealFor' => "This service is perfect for small businesses and startups looking to stay financially organized. It's also well-suited for professionals in real estate and property management, legal firms and practitioners, nonprofit organizations and NGOs, as well as businesses in the hospitality sector.",
             'includes' => [
                 'Up to 12 months of bookkeeping done quickly',
@@ -26,7 +26,7 @@
                 'Clear financial reports (P&L, balance sheet, cash flow)',
                 'Insights to grow and manage cash flow confidently'
             ],
-            'cta' => 'Let us handle the books—so you can focus on growth.'
+            'cta' => 'Let us handle the books - so you can focus on growth.'
         ],
         [
             'icon' => asset('images/service-icons/Real-Estate.png'),
@@ -40,7 +40,7 @@
                 'Reconciliation of bank, mortgage, and escrow accounts',
                 'Support with tax prep and Schedule E reporting'
             ],
-            'cta' => 'Keep your books clean, your cash flow visible, and your ROI strong—month after month.'
+            'cta' => 'Keep your books clean, your cash flow visible, and your ROI strong - month after month.'
         ],
         [
             'icon' => asset('images/service-icons/Legal.png'),
@@ -101,7 +101,7 @@
         @endif
 
         <!-- Services Grid -->
-        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($services as $service)
                 <div class="bg-white rounded-xl p-8 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100 transition-all duration-300 hover:shadow-lg animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                     <!-- Icon -->
@@ -160,7 +160,7 @@
                                 @php
                                     $ctaStr = $service['cta'];
                                     // Use strong for first sentence if matches a question or dash
-                                    $ctaFormatted = preg_replace('/^([^?\—]+[?\—])\s*/', '<strong class="text-[#1F2937]">$1</strong> ', $ctaStr);
+                                    $ctaFormatted = preg_replace('/^([^?\-]+[?\-])\s*/', '<strong class="text-[#1F2937]">$1</strong> ', $ctaStr);
                                 @endphp
                                 {!! $ctaFormatted === $ctaStr ? '<strong class="text-[#1F2937]">'.$ctaStr.'</strong>' : $ctaFormatted !!}
                             </p>
