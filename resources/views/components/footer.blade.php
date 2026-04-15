@@ -33,7 +33,7 @@
                     <li><a href="{{ url('/') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Home</a></li>
                     <li><a href="{{ url('/services') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Services</a></li>
                     <li><a href="{{ url('/how-it-works') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">How It Works</a></li>
-                    <li><a href="{{ url('/tools-and-tips') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Tools and Tips</a></li>
+                    <li><a href="{{ url('/blog') }}" class="inline-block text-sm text-slate-300 transition-all duration-300 hover:translate-x-1 hover:text-white">Tools and Tips</a></li>
                     <li>
                         <a 
                             href="https://docs.google.com/document/d/1TmDEIk_PToY1pNmcXMWvgFd5tDUI0BoI/edit?pli=1&tab=t.0" 

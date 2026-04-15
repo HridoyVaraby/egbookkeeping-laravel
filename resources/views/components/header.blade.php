@@ -11,7 +11,6 @@
                 ['label' => 'Benefits', 'path' => '/benefits'],
                 ['label' => 'About Us', 'path' => '/about'],
                 ['label' => 'Pricing', 'path' => '/pricing'],
-                ['label' => 'Blog', 'path' => '/blog'],
                 ['label' => 'Contact Us', 'path' => '/contact'],
             ];
         @endphp
