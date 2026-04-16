@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
 
 // Home Page
 Route::get('/', function () {
@@ -43,7 +45,9 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // Form Submissions
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::middleware(['throttle:5,1'])->group(function () {
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+});
 
 // Legal Pages
 Route::prefix('legal')->name('legal.')->group(function () {
