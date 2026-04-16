@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
             \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+            \App\Http\Middleware\SetSecurityHeaders::class,
         ]);
         $middleware->alias([
             'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
