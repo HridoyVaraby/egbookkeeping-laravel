@@ -28,7 +28,7 @@
 
             {{-- Title --}}
             <h1 class="text-4xl font-bold tracking-tight text-eg-heading sm:text-5xl font-display">
-                {!! $title !!}
+                {!! Purifier::clean($title) !!}
             </h1>
 
             {{-- Description --}}
