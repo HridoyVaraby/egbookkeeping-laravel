@@ -75,7 +75,7 @@
 
             {{-- Content --}}
             <div class="prose prose-lg max-w-none prose-headings:text-eg-off-black prose-headings:font-bold prose-p:text-eg-body prose-a:text-eg-accent prose-strong:text-eg-off-black prose-img:rounded-2xl">
-                {!! clean($post->body) !!}
+                {!! \Mews\Purifier\Facades\Purifier::clean($post->body) !!}
             </div>
 
             {{-- Back to Blog --}}

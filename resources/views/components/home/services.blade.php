@@ -162,7 +162,7 @@
                                     // Use strong for first sentence if matches a question or dash
                                     $ctaFormatted = preg_replace('/^([^?\-]+[?\-])\s*/', '<strong class="text-[#1F2937]">$1</strong> ', $ctaStr);
                                 @endphp
-                                {!! $ctaFormatted === $ctaStr ? '<strong class="text-[#1F2937]">'.$ctaStr.'</strong>' : $ctaFormatted !!}
+                                {!! $ctaFormatted === $ctaStr ? '<strong class="text-[#1F2937]">'.e($ctaStr).'</strong>' : Purifier::clean($ctaFormatted) !!}
                             </p>
                         </div>
                     @endif

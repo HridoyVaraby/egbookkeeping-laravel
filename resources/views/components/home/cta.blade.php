@@ -16,7 +16,7 @@
                     <!-- Left content -->
                     <div class="flex-1 text-left">
                         <h2 class="text-3xl md:text-4xl font-bold text-eg-heading mb-4 font-display">
-                            {!! str_replace('Bookkeeping', '<span class="text-[#FF6B35]">Bookkeeping</span>', $title) !!}
+                            {!! str_replace('Bookkeeping', '<span class="text-[#FF6B35]">Bookkeeping</span>', e($title)) !!}
                         </h2>
                         <p class="text-eg-body text-base md:text-lg max-w-2xl leading-relaxed">
                             {{ $description }}
