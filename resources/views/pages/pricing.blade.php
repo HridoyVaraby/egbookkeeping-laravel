@@ -175,6 +175,7 @@
         </div>
     </section>
 
+    {{-- WARNING: pricing_notice_content is sanitized via Setting model accessor. Do not use {!! !!} elsewhere. --}}
     {{-- Dynamic Pricing Notice Section --}}
     @php
         $pricingNoticeEnabled = \App\Models\Setting::where('key', 'pricing_notice_enabled')->value('value') === '1';
@@ -196,7 +197,7 @@
                     prose-p:leading-relaxed prose-p:mb-4
                     prose-strong:text-[#1F2937] prose-strong:font-bold
                     prose-ul:list-disc prose-ul:ml-6 prose-li:mb-2">
-                    {!! $pricingNoticeContent !!}
+                    {!! $pricingNoticeContent !!}  {{-- Sanitized via Setting model accessor --}}
                 </div>
             </div>
         </section>
