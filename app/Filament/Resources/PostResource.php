@@ -90,8 +90,6 @@ class PostResource extends Resource
                                     ->imageResizeTargetWidth(1920)
                                     ->imageResizeTargetHeight(1080)
                                     ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
-                                    ->enableFileNameRotation()
-                                    ->preserveFilenames(false)
                                     ->downloadable()
                                     ->deletable(),
                             ]),
