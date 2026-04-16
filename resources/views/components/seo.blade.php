@@ -1,7 +1,7 @@
 @props([
     'title' => 'Expert Bookkeeping Services for Law Firms & Small Businesses',
     'description' => 'EG Bookkeeping LLC offers professional, accurate, and reliable bookkeeping solutions tailored for law firms and real estate professionals.',
-    'image' => asset('images/og-image.jpg'),
+    'image' => asset('ograph.png'),
     'url' => url()->current(),
     'type' => 'website',
     'article' => null,
