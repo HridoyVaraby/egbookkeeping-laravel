@@ -85,7 +85,15 @@ class PostResource extends Resource
                                     ->preload(),
                                 Forms\Components\FileUpload::make('featured_image')
                                     ->image()
-                                    ->directory('blog'),
+                                    ->directory('blog')
+                                    ->maxSize(5120) // 5MB max
+                                    ->imageResizeTargetWidth(1920)
+                                    ->imageResizeTargetHeight(1080)
+                                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                    ->enableFileNameRotation()
+                                    ->preserveFilenames(false)
+                                    ->downloadable()
+                                    ->deletable(),
                             ]),
                         Forms\Components\Section::make('SEO')
                             ->schema([
