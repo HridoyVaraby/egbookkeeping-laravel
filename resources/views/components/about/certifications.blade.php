@@ -35,6 +35,9 @@
                             src="{{ $cert['image'] }}"
                             alt="{{ $cert['alt'] }}"
                             class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                            width="400"
+                            height="300"
                         />
                     </div>
                     <p class="text-xs text-center mt-4 text-eg-body/60 font-medium">

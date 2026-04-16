@@ -2,6 +2,9 @@
     'title' => 'Expert Bookkeeping Services for Law Firms & Small Businesses',
     'description' => 'EG Bookkeeping LLC offers professional, accurate, and reliable bookkeeping solutions tailored for law firms and real estate professionals.',
     'keywords' => 'bookkeeping, law firm bookkeeping, real estate bookkeeping, QuickBooks Online, Xero, financial reporting',
+    'image' => null,
+    'ogType' => 'website',
+    'article' => null,
 ])
 
 <!DOCTYPE html>
@@ -11,25 +14,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- SEO Metadata --}}
-    <title>{{ $title }} | EG Bookkeeping LLC</title>
-    <meta name="description" content="{{ $description }}">
-    <meta name="keywords" content="{{ $keywords }}">
-    <link rel="canonical" href="{{ url()->current() }}">
+    {{-- SEO Metadata via Component --}}
+    <x-seo
+        :title="$title"
+        :description="$description"
+        :keywords="$keywords"
+        :image="$image ?? asset('images/og-image.jpg')"
+        :type="$ogType"
+        :article="$article"
+    />
 
-    {{-- Open Graph / Facebook --}}
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="{{ $title }} | EG Bookkeeping LLC">
-    <meta property="og:description" content="{{ $description }}">
-    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
-
-    {{-- Twitter --}}
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="{{ $title }} | EG Bookkeeping LLC">
-    <meta property="twitter:description" content="{{ $description }}">
-    <meta property="twitter:image" content="{{ asset('images/og-image.jpg') }}">
+    {{-- Business Structured Data (Global) --}}
+    <x-schema.business />
 
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +36,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 
-    {{-- Alpine JS Initialization --}}
+    {{-- Lucide Icons --}}
     <script defer src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-sans antialiased bg-white text-eg-body selection:bg-eg-accent selection:text-white">
@@ -56,6 +52,9 @@
         {{-- Site Footer --}}
         <x-footer />
     </div>
+
+    {{-- WhatsApp Widget --}}
+    <x-whatsapp-widget />
 
     {{-- Global Scripts --}}
     <script>

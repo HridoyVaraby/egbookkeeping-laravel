@@ -12,6 +12,9 @@
                         src="{{ asset('logo.svg') }}" 
                         alt="EG Bookkeeping LLC" 
                         class="h-12 w-auto"
+                        loading="lazy"
+                        width="180"
+                        height="48"
                     />
                 </a>
                 <p class="mt-6 text-sm leading-7 text-slate-300">
@@ -105,7 +108,7 @@
                                 class="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-[#EBA927] hover:bg-[#EBA927]"
                                 aria-label="{{ $social['label'] }}"
                             >
-                                <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5 opacity-90 transition-all duration-300 group-hover:opacity-100" style="filter: brightness(0) saturate(100%) invert(100%);" alt="{{ $social['label'] }}" />
+                                <img src="{{ asset('images/footer-icons/' . $social['icon']) }}" class="h-5 w-5 opacity-90 transition-all duration-300 group-hover:opacity-100" style="filter: brightness(0) saturate(100%) invert(100%);" alt="{{ $social['label'] }}" loading="lazy" width="20" height="20" />
                             </a>
                         @endforeach
                     </div>
@@ -129,7 +132,7 @@
                 @endphp
                 @foreach($payments as $payment)
                     <div class="flex items-center justify-center rounded-xl border border-white/10 bg-white/95 px-3 py-2 shadow-sm">
-                        <img src="{{ asset('images/footer-icons/' . $payment['file']) }}" alt="{{ $payment['name'] }}" class="h-5 w-auto" />
+                        <img src="{{ asset('images/footer-icons/' . $payment['file']) }}" alt="{{ $payment['name'] }} payment method" class="h-5 w-auto" loading="lazy" width="40" height="20" />
                     </div>
                 @endforeach
             </div>

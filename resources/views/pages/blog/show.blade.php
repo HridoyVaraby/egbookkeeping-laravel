@@ -1,12 +1,26 @@
-<x-layouts.app>
-    <x-slot:title>{{ $post->title }}</x-slot:title>
-    <x-slot:description>{{ \Illuminate\Support\Str::limit(strip_tags($post->excerpt ?? $post->body), 150) }}</x-slot:description>
+<x-layouts.app
+    :title="$post->meta_title ?: $post->title"
+    :description="Illuminate\Support\Str::limit(strip_tags($post->meta_description ?: $post->excerpt ?: $post->body), 160)"
+    :image="$post->featured_image ? asset('storage/' . $post->featured_image) : null"
+    ogType="article"
+    :article="[
+        'published_time' => $post->created_at->toIso8601String(),
+        'modified_time' => $post->updated_at->toIso8601String(),
+        'author' => 'EGBookkeeping',
+        'section' => $post->category->name,
+    ]"
+    :keywords="$post->meta_keywords ?: 'bookkeeping, small business, ' . $post->category->name"
+>
+    {{-- BlogPosting JSON-LD Structured Data --}}
+    @push('scripts')
+        <x-schema.blog-post :post="$post" />
+    @endpush
 
-    <x-ui.page-hero 
+    <x-ui.page-hero
         :title="$post->title"
         :description="$post->excerpt"
         :breadcrumbs="[
-            ['label' => 'Home', 'path' => '/'], 
+            ['label' => 'Home', 'path' => '/'],
             ['label' => 'Blog', 'path' => route('blog.index')],
             ['label' => $post->category->name, 'path' => '#'],
             ['label' => 'Post Details', 'path' => '#']
@@ -18,7 +32,13 @@
             {{-- Featured Image --}}
             @if($post->featured_image)
                 <div class="aspect-[21/9] rounded-3xl overflow-hidden mb-12 shadow-2xl">
-                    <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}" class="w-full h-full object-cover">
+                    <img
+                        src="{{ asset('storage/' . $post->featured_image) }}"
+                        alt="{{ $post->title }} - Featured Image"
+                        class="w-full h-full object-cover"
+                        width="1200"
+                        height="514"
+                    >
                 </div>
             @endif
 
@@ -60,19 +80,31 @@
 
             {{-- Back to Blog --}}
             <div class="mt-16 pt-12 border-t border-gray-100 flex justify-between items-center">
-                <a href="{{ route('blog.index') }}" class="group flex items-center gap-2 text-eg-off-black font-semibold hover:text-eg-accent transition-colors">
+                <a href="{{ route('blog.index') }}" class="group flex items-center gap-2 text-eg-off-black font-semibold hover:text-eg-accent transition-colors" aria-label="Back to all blog posts">
                     <i data-lucide="arrow-left" class="w-5 h-5 transition-transform group-hover:-translate-x-1"></i>
                     Back to all insights
                 </a>
-                
+
                 <div class="flex items-center gap-4">
                     <span class="text-sm font-semibold text-eg-subheading">Share:</span>
                     <div class="flex gap-2">
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
-                            <img src="{{ asset('images/footer-icons/linkedin.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="LinkedIn" />
+                        <a
+                            href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(route('blog.show', $post->slug)) }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all"
+                            aria-label="Share on LinkedIn"
+                        >
+                            <img src="{{ asset('images/footer-icons/linkedin.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="LinkedIn" width="16" height="16" />
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all">
-                            <img src="{{ asset('images/footer-icons/facebook.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="Facebook" />
+                        <a
+                            href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('blog.show', $post->slug)) }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group hover:bg-eg-accent transition-all"
+                            aria-label="Share on Facebook"
+                        >
+                            <img src="{{ asset('images/footer-icons/facebook.svg') }}" class="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:invert group-hover:brightness-0 transition-all" alt="Facebook" width="16" height="16" />
                         </a>
                     </div>
                 </div>
@@ -89,7 +121,14 @@
                     @foreach($related_posts as $related)
                         <a href="{{ route('blog.show', $related->slug) }}" class="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                             <div class="aspect-video overflow-hidden">
-                                <img src="{{ $related->featured_image ? asset('storage/' . $related->featured_image) : 'https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&q=80' }}" alt="{{ $related->title }}" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                                <img
+                                    src="{{ $related->featured_image ? asset('storage/' . $related->featured_image) : 'https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&q=80' }}"
+                                    alt="{{ $related->title }}"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                    loading="lazy"
+                                    width="400"
+                                    height="225"
+                                >
                             </div>
                             <div class="p-6">
                                 <span class="text-xs font-bold text-eg-accent mb-2 block">{{ $related->category->name }}</span>

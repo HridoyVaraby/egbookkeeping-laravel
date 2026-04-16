@@ -33,8 +33,11 @@
                         <div class="flex h-20 w-full items-center justify-center rounded-2xl border border-transparent bg-white/70 px-4 animate-on-scroll delay-{{ ($loop->index % 4 + 1) * 100 }}">
                             <img
                                 src="{{ $platform['image'] }}"
-                                alt="{{ $platform['name'] }}"
+                                alt="{{ $platform['name'] }} accounting platform logo"
                                 class="max-w-full max-h-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 hover:scale-105 transition-all duration-300 ease-out"
+                                loading="lazy"
+                                width="160"
+                                height="60"
                             />
                         </div>
                     @endforeach

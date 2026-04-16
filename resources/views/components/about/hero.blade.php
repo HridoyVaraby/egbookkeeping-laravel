@@ -16,8 +16,11 @@
                 <div class="absolute -inset-4 bg-eg-accent/10 rounded-xl -z-10 transform rotate-3"></div>
                 <img
                     src="{{ asset('images/about-hero.jpg') }}"
-                    alt="Bookkeeping Services"
+                    alt="EG Bookkeeping LLC team providing professional bookkeeping services"
                     class="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                    width="640"
+                    height="427"
                 />
             </div>
         </div>

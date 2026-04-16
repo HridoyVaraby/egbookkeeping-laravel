@@ -55,7 +55,9 @@
                 <div class="w-full max-w-lg">
                     <img 
                         src="{{ asset('images/Designer2-1536x878.webp') }}" 
-                        alt="EG Bookkeeping Services" 
+                        alt="Professional bookkeeping and financial management services by EG Bookkeeping LLC"
+                        width="1536"
+                        height="878"
                         class="w-full h-auto object-contain rounded-2xl shadow-xl transition-transform duration-700 hover:scale-[1.02]"
                     />
                     <div class="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2 animate-on-scroll delay-300">

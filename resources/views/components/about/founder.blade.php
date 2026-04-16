@@ -14,8 +14,11 @@
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
                         <img
                             src="{{ asset('images/reaz.jpg') }}"
-                            alt="Md. Reazul Haque (Reaz) - Founder & CEO"
+                            alt="Md. Reazul Haque (Reaz) - Founder & CEO of EG Bookkeeping LLC"
                             class="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            loading="lazy"
+                            width="400"
+                            height="500"
                         />
                         {{-- Overlay Gradient --}}
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>

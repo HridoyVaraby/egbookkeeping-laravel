@@ -110,7 +110,7 @@
                         <div class="w-[90px] h-[90px] rounded-full border border-[#FFE4DC] bg-white flex items-center justify-center shadow-sm">
                             <!-- Inner solid yellow circle with the image -->
                             <div class="w-[72px] h-[72px] bg-eg-primary rounded-full flex items-center justify-center">
-                                <img src="{{ $service['icon'] }}" alt="{{ $service['title'] }}" class="w-11 h-11 object-contain" />
+                                <img src="{{ $service['icon'] }}" alt="{{ $service['title'] }} service icon" class="w-11 h-11 object-contain" loading="lazy" width="44" height="44" />
                             </div>
                         </div>
                     </div>

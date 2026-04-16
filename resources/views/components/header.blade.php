@@ -16,7 +16,7 @@
         @endphp
 
         <a href="{{ url('/') }}" class="flex items-center">
-            <img src="{{ asset('logo.svg') }}" alt="EG Bookkeeping LLC" class="h-12" />
+            <img src="{{ asset('logo.svg') }}" alt="EG Bookkeeping LLC - Professional Bookkeeping Services" class="h-12" width="180" height="48" />
         </a>
 
         <!-- Desktop Navigation -->

@@ -43,10 +43,12 @@ class Post extends Model
     {
         static::saved(function ($model) {
             \Spatie\ResponseCache\Facades\ResponseCache::clear();
+            \Illuminate\Support\Facades\Artisan::call('sitemap:generate');
         });
 
         static::deleted(function ($model) {
             \Spatie\ResponseCache\Facades\ResponseCache::clear();
+            \Illuminate\Support\Facades\Artisan::call('sitemap:generate');
         });
     }
 }

@@ -59,8 +59,11 @@
                             <div class="aspect-video overflow-hidden relative">
                                 <img
                                     src="{{ $project['image'] }}"
-                                    alt="{{ $project['title'] }}"
+                                    alt="{{ $project['title'] }} - {{ $project['category'] }} case study"
                                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    width="800"
+                                    height="450"
                                 />
                                 <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div>
                             </div>

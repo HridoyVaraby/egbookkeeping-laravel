@@ -20,6 +20,9 @@
                                 src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : 'https://images.unsplash.com/photo-1454165833741-97b5299e896f?w=800&q=80' }}" 
                                 alt="{{ $post->title }}"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy"
+                                width="800"
+                                height="450"
                             >
                             <div class="absolute top-4 left-4">
                                 <span class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-eg-accent shadow-sm">

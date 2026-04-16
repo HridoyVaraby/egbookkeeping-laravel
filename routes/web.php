@@ -66,22 +66,14 @@ Route::prefix('legal')->name('legal.')->group(function () {
 
 // Sitemap
 Route::get('/sitemap.xml', function () {
-    $sitemap = \Spatie\Sitemap\Sitemap::create()
-        ->add(\Spatie\Sitemap\Tags\Url::create('/')->setPriority(1.0))
-        ->add(\Spatie\Sitemap\Tags\Url::create('/about')->setPriority(0.8))
-        ->add(\Spatie\Sitemap\Tags\Url::create('/services')->setPriority(0.9))
-        ->add(\Spatie\Sitemap\Tags\Url::create('/pricing')->setPriority(0.8))
-        ->add(\Spatie\Sitemap\Tags\Url::create('/contact')->setPriority(0.8))
-        ->add(\Spatie\Sitemap\Tags\Url::create('/blog')->setPriority(0.7));
+    $path = public_path('sitemap.xml');
 
-    \App\Models\Post::where('is_published', true)->get()->each(function (\App\Models\Post $post) use ($sitemap) {
-        $sitemap->add(
-            \Spatie\Sitemap\Tags\Url::create("/blog/{$post->slug}")
-                ->setLastModificationDate($post->updated_at)
-                ->setChangeFrequency(\Spatie\Sitemap\Tags\Url::CHANGE_FREQUENCY_MONTHLY)
-                ->setPriority(0.6)
-        );
-    });
+    if (!file_exists($path)) {
+        \Illuminate\Support\Facades\Artisan::call('sitemap:generate');
+    }
 
-    return collect([$sitemap->render()])->first();
+    return response()->file($path, [
+        'Content-Type' => 'application/xml',
+    ]);
 })->name('sitemap');
+
