@@ -45,7 +45,7 @@
     @stack('styles')
 
     {{-- Lucide Icons --}}
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-eg-body selection:bg-eg-accent selection:text-white">
     <div class="relative min-h-screen flex flex-col">
@@ -67,8 +67,12 @@
     {{-- Global Scripts --}}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOMContentLoaded fired. window.lucide is:", typeof lucide !== 'undefined' ? lucide : 'undefined');
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
+                console.log("lucide.createIcons() called. Now there are " + document.querySelectorAll('svg.lucide').length + " svg elements.");
+            } else {
+                console.error("Lucide is undefined.");
             }
         });
     </script>
