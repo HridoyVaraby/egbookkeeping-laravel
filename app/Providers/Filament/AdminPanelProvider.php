@@ -38,6 +38,7 @@ class AdminPanelProvider extends PanelProvider
             )
             ->maxContentWidth(\Filament\Support\Enums\MaxWidth::Full)
             ->login()
+            ->profile()
             ->darkMode(false)
             ->colors([
                 'primary' => Color::Amber,
