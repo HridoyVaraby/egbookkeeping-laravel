@@ -14,7 +14,7 @@ class Post extends Model
 
     protected $fillable = [
         'title', 'slug', 'body', 'excerpt', 'featured_image',
-        'is_published', 'meta_title', 'meta_description', 'meta_keywords', 'category_id'
+        'is_published', 'meta_title', 'meta_description', 'meta_keywords', 'category_id', 'author_id'
     ];
 
     protected $casts = [
@@ -37,6 +37,14 @@ class Post extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * Get the author that wrote the post.
+     */
+    public function author(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'author_id');
     }
 
     protected static function booted()

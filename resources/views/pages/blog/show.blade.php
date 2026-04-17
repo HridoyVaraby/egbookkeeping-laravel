@@ -6,8 +6,8 @@
     :article="[
         'published_time' => $post->created_at->toIso8601String(),
         'modified_time' => $post->updated_at->toIso8601String(),
-        'author' => 'EGBookkeeping',
-        'section' => $post->category->name,
+        'author' => $post->author?->name ?? 'EGBookkeeping',
+        'section' => $post->category?->name,
     ]"
     :keywords="$post->meta_keywords ?: 'bookkeeping, small business, ' . $post->category->name"
 >
@@ -49,7 +49,7 @@
                         <i data-lucide="user" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <p class="font-semibold text-eg-off-black">EGBookkeeping</p>
+                        <p class="font-semibold text-eg-off-black">{{ $post->author?->name ?? 'EGBookkeeping' }}</p>
                         <p class="text-xs">Author</p>
                     </div>
                 </div>

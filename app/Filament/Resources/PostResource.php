@@ -78,6 +78,12 @@ class PostResource extends Resource
                             ]),
                         Forms\Components\Section::make('Meta Information')
                             ->schema([
+                                Forms\Components\Select::make('author_id')
+                                    ->relationship('author', 'name')
+                                    ->label('Author')
+                                    ->default(fn () => auth()->id())
+                                    ->searchable()
+                                    ->preload(),
                                 Forms\Components\Select::make('category_id')
                                     ->relationship('category', 'name')
                                     ->required()
@@ -121,7 +127,7 @@ class PostResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->label('Title')
                     ->weight(\Filament\Support\Enums\FontWeight::Bold)
-                    ->description(fn (Post $record): string => 'Author: Admin', position: 'below'),
+                    ->description(fn (Post $record): string => 'Author: ' . ($record->author?->name ?? 'Admin'), position: 'below'),
                 Tables\Columns\TextColumn::make('category.name')
                     ->label('Category')
                     ->badge()
