@@ -178,8 +178,8 @@
     {{-- WARNING: pricing_notice_content is sanitized via Setting model accessor. Do not use {!! !!} elsewhere. --}}
     {{-- Dynamic Pricing Notice Section --}}
     @php
-        $pricingNoticeEnabled = \App\Models\Setting::where('key', 'pricing_notice_enabled')->value('value') === '1';
-        $pricingNoticeContent = \App\Models\Setting::where('key', 'pricing_notice_content')->value('value');
+        $pricingNoticeEnabled = \App\Models\Setting::where('key', 'pricing_notice_enabled')->first()?->value === '1';
+        $pricingNoticeContent = \App\Models\Setting::where('key', 'pricing_notice_content')->first()?->value;
     @endphp
 
     @if($pricingNoticeEnabled && !empty(trim(strip_tags($pricingNoticeContent))))
@@ -191,13 +191,19 @@
                     </span>
                     Pricing Notice
                 </h2>
-                <div class="prose prose-lg max-w-none text-[#4B5563] border-4 border-red-500
-                    prose-headings:font-display prose-headings:font-bold prose-headings:text-[#1F2937]
-                    prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-8
-                    prose-p:leading-relaxed prose-p:mb-4
-                    prose-strong:text-[#1F2937] prose-strong:font-bold
-                    prose-ul:list-disc prose-ul:ml-6 prose-li:mb-2">
-                    {!! $pricingNoticeContent !!}  {{-- Sanitized via Setting model accessor --}}
+                <div class="p-8 bg-[#F8FAFC] rounded-2xl relative overflow-hidden">
+                    {{-- Soft background accent --}}
+                    <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                        <i data-lucide="info" class="w-32 h-32 text-blue-600"></i>
+                    </div>
+                    <div class="relative z-10 prose prose-lg max-w-none text-[#4B5563]
+                        prose-headings:font-display prose-headings:font-bold prose-headings:text-[#1F2937]
+                        prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-8
+                        prose-p:leading-relaxed prose-p:mb-4
+                        prose-strong:text-[#1F2937] prose-strong:font-bold
+                        prose-ul:list-disc prose-ul:ml-6 prose-li:mb-2 text-left">
+                        {!! $pricingNoticeContent !!}  {{-- Sanitized via Setting model accessor --}}
+                    </div>
                 </div>
             </div>
         </section>

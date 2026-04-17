@@ -62,7 +62,10 @@
                         class="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
                         :class="{ 'bg-gray-50': openIndex === {{ $index }} }"
                     >
-                        <span class="text-eg-heading font-semibold text-base md:text-lg pr-4 font-display">
+                        <span 
+                            class="font-semibold text-base md:text-lg pr-4 font-display transition-colors"
+                            :class="openIndex === {{ $index }} ? 'text-eg-heading' : 'text-gray-900'"
+                        >
                             {{ $faq['question'] }}
                         </span>
                         <span class="flex-shrink-0 text-[#FF6B35]">
