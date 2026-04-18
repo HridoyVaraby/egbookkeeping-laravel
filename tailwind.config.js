@@ -85,6 +85,29 @@ export default {
                 'eg-dark-slate': '#1A202C',
                 'eg-light-gray': '#F7FAFC',
                 'eg-gray': '#4A5568',
+                // Tax Preparer specific colors
+                'tax-primary': {
+                    DEFAULT: '#EBA927',
+                    50: '#fef9ec',
+                    100: '#fdf2d3',
+                    200: '#fbe5a7',
+                    300: '#f7d170',
+                    400: '#f3ba45',
+                    500: '#EBA927',
+                    600: '#d89520',
+                    700: '#b3751b',
+                    800: '#915c1c',
+                    900: '#764b1b',
+                },
+                'tax-accent': {
+                    DEFAULT: '#2374b7',
+                    light: '#60a5fa',
+                    dark: '#1a5286',
+                },
+                'tax-success': {
+                    DEFAULT: '#25D366',
+                    dark: '#20BA5A',
+                },
                 sidebar: {
                     DEFAULT: "hsl(var(--sidebar-background))",
                     foreground: "hsl(var(--sidebar-foreground))",
@@ -118,10 +141,34 @@ export default {
                         height: "0",
                     },
                 },
+                "tax-fade-in": {
+                    from: { opacity: "0" },
+                    to: { opacity: "1" },
+                },
+                "tax-slide-up": {
+                    from: { opacity: "0", transform: "translateY(30px)" },
+                    to: { opacity: "1", transform: "translateY(0)" },
+                },
+                "tax-fade-in-up": {
+                    from: { opacity: "0", transform: "translateY(40px)" },
+                    to: { opacity: "1", transform: "translateY(0)" },
+                },
+                "tax-blob": {
+                    "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+                    "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                    "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                }
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
+                "tax-fade-in": "tax-fade-in 0.8s ease-out",
+                "tax-slide-up": "tax-slide-up 0.8s ease-out",
+                "tax-slide-up-delay-1": "tax-slide-up 0.8s ease-out 0.2s both",
+                "tax-slide-up-delay-2": "tax-slide-up 0.8s ease-out 0.4s both",
+                "tax-fade-in-up": "tax-fade-in-up 1s ease-out 0.6s both",
+                "tax-fade-in-up-delay": "tax-fade-in-up 1s ease-out 0.8s both",
+                "tax-blob": "tax-blob 7s infinite",
             },
         },
     },

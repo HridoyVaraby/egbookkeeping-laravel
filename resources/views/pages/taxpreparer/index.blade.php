@@ -1,0 +1,9 @@
+<x-layouts.taxpreparer>
+    @include('pages.taxpreparer.partials.hero')
+    @include('pages.taxpreparer.partials.services')
+    @include('pages.taxpreparer.partials.why-us')
+    @include('pages.taxpreparer.partials.pricing')
+    @include('pages.taxpreparer.partials.process')
+    @include('pages.taxpreparer.partials.cta')
+    @include('pages.taxpreparer.partials.footer')
+</x-layouts.taxpreparer>
