@@ -84,6 +84,12 @@ Run the Laravel initialization commands:
 # Run database migrations
 /usr/local/lsws/lsphp83/bin/php artisan migrate --force
 
+# Seed the database (creates default admin and categories)
+/usr/local/lsws/lsphp83/bin/php artisan db:seed --force
+
+# Seed the blog posts from the WordPress export
+/usr/local/lsws/lsphp83/bin/php artisan db:seed --class=WordPressPostSeeder --force
+
 # Create the storage symlink
 /usr/local/lsws/lsphp83/bin/php artisan storage:link
 ```
