@@ -72,7 +72,7 @@ class AdminPanelProvider extends PanelProvider
                     ->navigationIcon('heroicon-o-photo')
                     ->navigationGroup('Content')
                     ->navigationSort(3)
-                    ->navigationCountBadge()
+                    ->navigationCountBadge(false)
                     ->defaultListView('grid' /* table or grid */),
             ]);
     }

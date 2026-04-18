@@ -22,4 +22,12 @@
         background-color: #F3F4F6 !important; /* gray-100 */
         border-radius: 0.5rem !important;
     }
+
+    /* Fix Filament Curator image grid squashing */
+    .curator-grid-column {
+        position: relative !important;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+    }
 </style>
