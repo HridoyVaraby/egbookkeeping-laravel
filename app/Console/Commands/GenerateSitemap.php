@@ -36,6 +36,7 @@ class GenerateSitemap extends Command
             ['url' => '/how-it-works', 'priority' => 0.7, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/industries', 'priority' => 0.7, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/benefits', 'priority' => 0.7, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
+            ['url' => '/portfolio', 'priority' => 0.7, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/pricing', 'priority' => 0.8, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/contact', 'priority' => 0.8, 'frequency' => Url::CHANGE_FREQUENCY_MONTHLY],
             ['url' => '/blog', 'priority' => 0.8, 'frequency' => Url::CHANGE_FREQUENCY_DAILY],

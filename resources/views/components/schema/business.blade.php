@@ -5,7 +5,7 @@
     "name": "EG Bookkeeping LLC",
     "url": "{{ url('/') }}",
     "logo": "{{ asset('logo.svg') }}",
-    "image": "{{ asset('images/og-image.jpg') }}",
+    "image": "{{ asset('ograph.png') }}",
     "description": "EG Bookkeeping LLC offers expert, cloud-based bookkeeping, payroll, tax prep, and fractional CFO services tailored for law firms, real estate professionals, and small businesses.",
     "telephone": "+15055232471",
     "email": "reaaz@egbookkeeping.com",

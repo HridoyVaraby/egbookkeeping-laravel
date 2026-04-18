@@ -10,7 +10,7 @@
     @if($post->featured_image)
     "image": "{{ asset('storage/' . $post->featured_image) }}",
     @else
-    "image": "{{ asset('images/og-image.jpg') }}",
+    "image": "{{ asset('ograph.png') }}",
     @endif
     "datePublished": "{{ $post->created_at->toIso8601String() }}",
     "dateModified": "{{ $post->updated_at->toIso8601String() }}",

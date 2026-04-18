@@ -32,6 +32,10 @@ Route::get('/benefits', function () {
     return view('pages.benefits');
 })->name('benefits');
 
+Route::get('/portfolio', function () {
+    return view('pages.portfolio');
+})->name('portfolio');
+
 Route::get('/pricing', function () {
     return view('pages.pricing');
 })->name('pricing');
