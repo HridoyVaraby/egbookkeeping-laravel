@@ -1,7 +1,7 @@
 <x-layouts.app
     :title="$post->meta_title ?: $post->title"
     :description="Illuminate\Support\Str::limit(strip_tags($post->meta_description ?: $post->excerpt ?: $post->body), 160)"
-    :image="$post->featured_image ? asset('storage/' . $post->featured_image) : null"
+    :image="$post->getFeaturedImageUrl()"
     ogType="article"
     :article="[
         'published_time' => $post->created_at->toIso8601String(),
@@ -30,10 +30,10 @@
     <article class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {{-- Featured Image --}}
-            @if($post->featured_image)
+            @if($post->getFeaturedImageUrl())
                 <div class="aspect-[21/9] rounded-3xl overflow-hidden mb-12 shadow-2xl">
                     <img
-                        src="{{ asset('storage/' . $post->featured_image) }}"
+                        src="{{ $post->getFeaturedImageUrl() }}"
                         alt="{{ $post->title }} - Featured Image"
                         class="w-full h-full object-cover"
                         width="1200"
@@ -122,7 +122,7 @@
                         <a href="{{ route('blog.show', $related->slug) }}" class="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
                             <div class="aspect-video overflow-hidden">
                                 <img
-                                    src="{{ $related->featured_image ? asset('storage/' . $related->featured_image) : 'https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&q=80' }}"
+                                    src="{{ $related->getFeaturedImageUrl() ?? 'https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&q=80' }}"
                                     alt="{{ $related->title }}"
                                     class="w-full h-full object-cover transition-transform group-hover:scale-105"
                                     loading="lazy"

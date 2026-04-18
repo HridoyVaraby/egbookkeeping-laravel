@@ -89,15 +89,12 @@ class PostResource extends Resource
                                     ->required()
                                     ->searchable()
                                     ->preload(),
-                                Forms\Components\FileUpload::make('featured_image')
-                                    ->image()
-                                    ->directory('blog')
-                                    ->maxSize(5120) // 5MB max
-                                    ->imageResizeTargetWidth(1920)
-                                    ->imageResizeTargetHeight(1080)
-                                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
-                                    ->downloadable()
-                                    ->deletable(),
+                                \Awcodes\Curator\Components\Forms\CuratorPicker::make('featured_image_id')
+                                    ->label('Featured Image')
+                                    ->relationship('featuredImage', 'id')
+                                    ->maxItems(1)
+                                    ->listDisplay()
+                                    ->buttonLabel('Select or Upload Image'),
                             ]),
                         Forms\Components\Section::make('SEO')
                             ->schema([
@@ -120,10 +117,10 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('featured_image')
+                \Awcodes\Curator\Components\Tables\CuratorColumn::make('featuredImage')
                     ->label('Thumbnail')
-                    ->square()
-                    ->defaultImageUrl(url('/placeholder.svg')),
+                    ->size(40)
+                    ->circular(false),
                 Tables\Columns\TextColumn::make('title')
                     ->label('Title')
                     ->weight(\Filament\Support\Enums\FontWeight::Bold)

@@ -7,8 +7,8 @@
     "headline": "{{ $post->meta_title ?: $post->title }}",
     "description": "{{ Illuminate\Support\Str::limit(strip_tags($post->meta_description ?: $post->excerpt ?: $post->body), 160) }}",
     "url": "{{ route('blog.show', $post->slug) }}",
-    @if($post->featured_image)
-    "image": "{{ asset('storage/' . $post->featured_image) }}",
+    @if($post->getFeaturedImageUrl())
+    "image": "{{ $post->getFeaturedImageUrl() }}",
     @else
     "image": "{{ asset('ograph.png') }}",
     @endif

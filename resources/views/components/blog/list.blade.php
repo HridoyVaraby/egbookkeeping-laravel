@@ -17,7 +17,7 @@
                     <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                         <div class="aspect-video overflow-hidden relative">
                             <img 
-                                src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : 'https://images.unsplash.com/photo-1454165833741-97b5299e896f?w=800&q=80' }}" 
+                                src="{{ $post->getFeaturedImageUrl() ?? 'https://images.unsplash.com/photo-1454165833741-97b5299e896f?w=800&q=80' }}" 
                                 alt="{{ $post->title }}"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 loading="lazy"

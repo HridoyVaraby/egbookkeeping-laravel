@@ -13,7 +13,7 @@ class Post extends Model
     use HasFactory, HasSlug;
 
     protected $fillable = [
-        'title', 'slug', 'body', 'excerpt', 'featured_image',
+        'title', 'slug', 'body', 'excerpt', 'featured_image', 'featured_image_id',
         'is_published', 'meta_title', 'meta_description', 'meta_keywords', 'category_id', 'author_id'
     ];
 
@@ -45,6 +45,30 @@ class Post extends Model
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id');
+    }
+
+    /**
+     * Get the curator featured image.
+     */
+    public function featuredImage(): BelongsTo
+    {
+        return $this->belongsTo(\Awcodes\Curator\Models\Media::class, 'featured_image_id');
+    }
+
+    /**
+     * Get the URL for the featured image, falling back to legacy strings.
+     */
+    public function getFeaturedImageUrl(): ?string
+    {
+        if ($this->featuredImage) {
+            return $this->featuredImage->url;
+        }
+
+        if ($this->featured_image) {
+            return asset('storage/' . $this->featured_image);
+        }
+
+        return null;
     }
 
     protected static function booted()
