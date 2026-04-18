@@ -46,6 +46,9 @@
 
     {{-- Lucide Icons --}}
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    {{-- Analytics --}}
+    <script defer src="https://analytics.egbookkeeping.com/script.js" data-website-id="cef21f23-1e75-405c-aa40-000d07ccf7e4"></script>
 </head>
 <body class="font-sans antialiased bg-white text-eg-body selection:bg-eg-accent selection:text-white">
     <div class="relative min-h-screen flex flex-col">
