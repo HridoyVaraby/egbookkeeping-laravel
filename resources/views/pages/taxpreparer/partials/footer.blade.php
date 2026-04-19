@@ -81,10 +81,10 @@
                     {{-- Social --}}
                     <div class="flex items-center gap-3 mt-4">
                         <a href="https://www.facebook.com/egtaxsolutions.reaz" aria-label="Facebook" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-tax-primary/20 hover:text-tax-primary flex items-center justify-center transition-colors">
-                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
                         <a href="https://linkedin.com/company/eg-tax-solutions" aria-label="LinkedIn" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-tax-primary/20 hover:text-tax-primary flex items-center justify-center transition-colors">
-                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
                     </div>
                 </div>
