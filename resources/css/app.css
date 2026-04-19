@@ -136,3 +136,16 @@
     .delay-400 { transition-delay: 400ms; }
     .delay-500 { transition-delay: 500ms; }
 }
+
+/* Tax Preparer Specific Utilities */
+@layer utilities {
+    .animate-blob {
+        animation: tax-blob 7s infinite;
+    }
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+}

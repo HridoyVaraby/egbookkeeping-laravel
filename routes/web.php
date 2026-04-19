@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TaxPreparerController;
 
 // Home Page
 Route::get('/', function () {
@@ -43,6 +44,9 @@ Route::get('/pricing', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+// Tax Preparer Landing Page
+Route::get('/taxpreparer', [TaxPreparerController::class, 'index'])->name('taxpreparer.index');
 
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
